@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-sunset-orange: #ff8f3c;
+  --color-secondary-warm-yellow: #ffb84d;
+  --color-neutral-charcoal-black: #1a1a1d;
+  --color-accent-neon-pink: #ff2e92;
+  --color-accent-magenta-purple: #a020f0;
+  --color-accent-deep-violet: #2e003e;
+}
