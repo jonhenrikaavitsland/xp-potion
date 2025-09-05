@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/images/xp-potion-logo.png';
+
 const navLinks = [
   { link: '/', label: 'home' },
   { link: '/products', label: 'products' },
@@ -8,25 +11,33 @@ const navLinks = [
 ];
 ---
 
-<header class='flex flex-col sticky top-0 bg-white shadow-md'>
+<header
+  class='flex flex-col sticky top-0 bg-primary-sunset-orange shadow-md'
+>
   <div
     class='flex justify-between flex-wrap md:flex-nowrap md:justify-normal px-5 py-2 lg:container lg:mx-auto'
   >
-    <a href='/'>
-      <div
-        class='flex items-end me-5 md:me-20 text-3xl font-bold font-serif'
-      >
-        <span class='uppercase'>xp-</span><span class='capitalize'
-          >potion</span
-        >
-      </div>
-    </a>
+    <div
+      class='w-20 h-20 md:w-40 md:h-40 flex justify-center items-center mx-auto md:mx-0'
+    >
+      <a href='/'>
+        <Image
+          src={logo}
+          alt='XP Potion'
+          widths={[100, 200, 300, 400]}
+          format='png'
+        />
+      </a>
+      <span class='sr-only'>Home</span>
+    </div>
 
     <nav
       class='hidden md:flex justify-end items-center w-full'
       aria-label='primary navigation'
     >
-      <ul class='flex gap-6 capitalize whitespace-nowrap'>
+      <ul
+        class='flex gap-6 capitalize whitespace-nowrap text-neutral-charcoal-black font-bold text-xl font-serif'
+      >
         {
           navLinks?.map((navLink) => (
             <li>
@@ -44,20 +55,20 @@ const navLinks = [
 
     <!-- Mobile menu toggle -->
     <details
-      class='flex my-auto md:hidden'
+      class='z-10 flex my-auto md:hidden'
       aria-label='Toggle navigation'
     >
       <summary class='flex justify-end cursor-pointer p-1.25'>
         <img
           src='/assets/icons/bars.svg'
           alt='Open menu'
-          class='open-icon h-6 w-6'
+          class='open-icon h-8 w-8'
           aria-hidden='true'
         />
         <img
           src='/assets/icons/close.svg'
           alt='Close menu'
-          class='close-icon hidden h-6 w-6'
+          class='close-icon hidden h-8 w-8'
           aria-hidden='true'
         />
       </summary>
