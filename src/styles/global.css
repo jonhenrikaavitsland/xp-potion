@@ -11,3 +11,8 @@
 
 }
 
+@layer base {
+  body {
+    text-color: var(--color-neutral-charcoal-black);
+  }
+}
