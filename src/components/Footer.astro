@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/images/xp-potion-logo.png';
+
+const quickLinks = [
+  { path: '/', label: 'Home' },
+  { path: '/products', label: 'Products' },
+  { path: '/blog', label: 'Blog' },
+  { path: '/about', label: 'About Us' },
+  { path: '/contact', label: 'Contact' },
+];
+
+const supportLinks = [
+  { path: '/faq', label: 'FAQ' },
+  { path: '/news', label: 'News' },
+  { path: '/cookie-policy', label: 'Cookie Policy' },
+  { path: '/privacy-policy', label: 'Privacy Policy' },
+  { path: '/terms-of-service', label: 'Terms of Service' },
+];
+---
+
+<footer class='bg-primary-sunset-orange py-12 px-6'>
+  <div
+    class='flex flex-col md:flex-row gap-8 lg:container lg:mx-auto pb-8'
+  >
+    <section class='grow'>
+      <div class='flex gap-3 items-center'>
+        <div class='w-15 h-15'>
+          <Image
+            src={logo}
+            alt='XP Potion'
+            widths={[100, 200]}
+            format='png'
+          />
+        </div>
+        <h2 class='capitalize font-bold text-2xl'>
+          <span class='uppercase'>xp</span> potion
+        </h2>
+      </div>
+
+      <p class='italic max-w-md'>
+        Boost your game, boost your XP, the ultimate energy drink
+        designed specifically for gamers who demand peak
+        performance.
+      </p>
+    </section>
+    <div class='flex flex-col md:flex-row gap-8 grow'>
+      <section class='flex flex-col gap-4 md:grow'>
+        <h2 class='capitalize font-semibold'>quick links</h2>
+        <ul class='space-y-2'>
+          {
+            quickLinks.map((qLink) => (
+              <li>
+                <a
+                  href={qLink.path}
+                  target='_self'
+                  class='hover:font-semibold block w-50'
+                >
+                  {qLink.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      <section class='flex flex-col gap-4 md:grow'>
+        <h2 class='capitalize font-semibold'>support</h2>
+        <ul class='space-y-2'>
+          {
+            supportLinks.map((sLink) => (
+              <li>
+                <a
+                  href={sLink.path}
+                  target='_self'
+                  class='hover:font-semibold block w-50'
+                >
+                  {sLink.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
+  </div>
+  <div class='border-t border-neutral-charcoal-black'>
+    <p class='italic text-center pt-8'>
+      © XP Potion 2025. All rights reserved. Boost your game, boost
+      your XP.
+    </p>
+  </div>
+</footer>
