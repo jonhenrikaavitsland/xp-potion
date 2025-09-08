@@ -1,5 +1,6 @@
 ---
 const { title, description } = Astro.props;
+import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import '../styles/global.css';
 ---
@@ -12,12 +13,13 @@ import '../styles/global.css';
     <meta name='generator' content={Astro.generator} />
     <meta name='description' content={description} />
     <title>{title} | XP Potion</title>
+    <meta name='robots' content='noindex, nofollow' />
   </head>
   <body class='flex flex-col min-h-screen'>
     <Header />
     <main class='grow'>
       <slot />
     </main>
-    <footer></footer>
+    <Footer />
   </body>
 </html>
