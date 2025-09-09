@@ -4,7 +4,10 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout title={frontmatter.title}>
+<BaseLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
   <div class='lg:container lg:mx-auto px-3 py-12'>
     <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
     <p class='italic'>{frontmatter.description}</p>
