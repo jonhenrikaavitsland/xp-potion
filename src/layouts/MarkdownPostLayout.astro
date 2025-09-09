@@ -5,22 +5,28 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
-  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <p class='italic'>{frontmatter.description}</p>
-  <p>Written by {frontmatter.author}</p>
-  <img
-    src={frontmatter.image.url}
-    width='300'
-    alt={frontmatter.image.alt}
-  />
-  <div class='tags'>
-    {
-      frontmatter.tags.map((tag: string) => (
-        <p class='tag'>
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
+  <div class='lg:container lg:mx-auto px-3 py-12'>
+    <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <p class='italic'>{frontmatter.description}</p>
+    <p>Written by {frontmatter.author}</p>
+    <img
+      src={frontmatter.image.url}
+      width='300'
+      alt={frontmatter.image.alt}
+    />
+    <div class='tags'>
+      {
+        frontmatter.tags.map((tag: string) => (
+          <p class='tag'>
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </p>
+        ))
+      }
+    </div>
+    <article
+      class='prose prose-lg mx-auto max-w-none mt-6 pt-2 border-t'
+    >
+      <slot />
+    </article>
   </div>
-  <slot />
 </BaseLayout>

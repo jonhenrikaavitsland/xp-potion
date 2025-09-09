@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Energy drinks for gamers: The secret to focus, stamina, and no-crash performance
+title: "Energy drinks for gamers: The secret to focus, stamina, and no-crash performance"
 pubDate: 2025-09-09
 description: 'Discover the best energy drinks for gamers. Learn how to boost focus, endurance, and hydration with no crash — a healthy alternative to G Fuel.'
 author: 'Jon Henrik Aavitsland'
