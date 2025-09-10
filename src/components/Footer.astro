@@ -17,13 +17,36 @@ const supportLinks = [
   { path: '/privacy-policy', label: 'Privacy Policy' },
   { path: '/terms-of-service', label: 'Terms of Service' },
 ];
+
+const socialIcons = [
+  {
+    image: '/assets/icons/discord-brand.svg',
+    label: 'Discord',
+    link: 'https://discord.com/',
+  },
+  {
+    image: '/assets/icons/tiktok-brand.svg',
+    label: 'Tiktok',
+    link: 'https://www.tiktok.com/',
+  },
+  {
+    image: '/assets/icons/twitch-brand.svg',
+    label: 'Twitch',
+    link: 'https://www.twitch.tv/',
+  },
+  {
+    image: '/assets/icons/x-twitter-brand.svg',
+    label: 'X formerly know as Twitter',
+    link: 'https://x.com/',
+  },
+];
 ---
 
 <footer class='bg-accent-magenta-purple text-white py-12 px-6'>
   <div
     class='flex flex-col md:flex-row gap-8 lg:container lg:mx-auto pb-8'
   >
-    <section class='grow'>
+    <section class='flex flex-col gap-4 grow'>
       <div class='flex gap-3 items-center'>
         <div class='w-15 h-15'>
           <Image
@@ -43,6 +66,20 @@ const supportLinks = [
         designed specifically for gamers who demand peak
         performance.
       </p>
+      <div class='flex gap-6'>
+        {
+          socialIcons.map((icon) => (
+            <a href={icon.link} target='_blank'>
+              <img
+                src={icon.image}
+                alt={icon.label}
+                class='h-6 max-w-full icon-white'
+              />
+              <span class='sr-only'>{icon.label}</span>
+            </a>
+          ))
+        }
+      </div>
     </section>
     <div class='flex flex-col md:flex-row gap-8 grow'>
       <section class='flex flex-col gap-4 md:grow'>
@@ -83,7 +120,7 @@ const supportLinks = [
       </section>
     </div>
   </div>
-  <div class='border-t border-accent-deep-violet'>
+  <div class='border-t border-accent-deep-violet/30'>
     <p class='italic text-center pt-8'>
       © XP Potion 2025. All rights reserved. Boost your game, boost
       your XP.
