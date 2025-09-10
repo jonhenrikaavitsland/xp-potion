@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const description =
+  'XP Potion is the gaming energy drink startup founded in 2025. Clean ingredients, bold flavors, and power-ups built for gamers, streamers & creators.';
+
+const allProducts = Object.values(
+  import.meta.glob('../pages/products/*.md', { eager: true })
+);
+---
+
+<BaseLayout title='About' description={description}>
+  <div class='bg-neutral-charcoal-black text-white'>
+    <div class='lg:container lg:mx-auto py-12 px-5'>
+      <div class='flex flex-col gap-6 max-w-4xl mx-auto'>
+        <section class='flex flex-col gap-4'>
+          <h1 class='font-semibold text-4xl'>About XP Potion</h1>
+          <p>
+            XP Potion was founded in 2025 with one mission: to fuel
+            gamers with the energy, focus, and endurance to reach
+            the next level—both in-game and in life.
+          </p>
+          <p>
+            It all started with a simple idea. Too many energy
+            drinks were built for quick highs and hard crashes,
+            filled with sugar and empty promises. As lifelong gamers
+            and creators, we wanted something better—a real power-up
+            that matched the needs of our community.
+          </p>
+          <p>
+            From late-night brainstorm sessions to early prototypes
+            tested during gaming marathons, XP Potion was built by
+            gamers, for gamers. Every can is designed to give you
+            the energy you need, without the crash, using clean
+            ingredients, bold flavors, and sustainable energy you
+            can trust.
+          </p>
+        </section>
+        <section class='flex flex-col gap-4'>
+          <h2 class='font-semibold text-2xl'>
+            Our Lineup of Power-Ups
+          </h2>
+          <p>
+            We know that every gamer’s grind is different—so we
+            created three unique ways to level up:
+          </p>
+          <ul class='space-y-4'>
+            {
+              allProducts.map((product: any) => (
+                <li>
+                  <a href={product.url} target='_self'>
+                    <div class='flex rounded-xl bg-neutral-800'>
+                      <div class='h-20 aspect-square rounded-s-xl'>
+                        <img
+                          src={product.frontmatter.image.url}
+                          alt={product.frontmatter.image.alt}
+                          class='rounded-s-xl'
+                        />
+                      </div>
+                      <div class='border-t border-e border-b rounded-e-xl p-2 ps-4'>
+                        <p class=''>
+                          {product.frontmatter.description}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <p>
+            Whether you’re climbing ranked ladders, streaming to
+            your community, or just looking for a better way to
+            power through the day, XP Potion has your back.
+          </p>
+          <p>
+            Because XP Potion isn’t just a drink—it’s a movement.
+            We’re here for the grinders, the dreamers, and the
+            creators who know the real journey never stops.
+          </p>
+          <h3 class='semibold text-xl'>
+            This is just the beginning. Level up with us. Drink XP
+            Potion.
+          </h3>
+        </section>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
