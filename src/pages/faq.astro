@@ -71,7 +71,7 @@ const jsonLd = {
             hydration, and more.
           </p>
         </div>
-        <div class='flex flex-col gap-4'>
+        <div class='flex flex-col gap-8'>
           {
             faqs.map(({ q, a }, i) => {
               const id = `q${i + 1}`;
@@ -80,7 +80,7 @@ const jsonLd = {
                   id={id}
                   class='group bg-neutral-800 rounded-2xl border p-4 open:shadow-sm'
                 >
-                  <summary class='flex cursor-pointer items-center justify-between gap-4 text-left text-lg hover:text-xl font-semibold marker:content-none'>
+                  <summary class='flex cursor-pointer items-center justify-between gap-4 text-left text-lg group-[&:not([open])]:hover:text-xl font-semibold marker:content-none'>
                     <span class=''>{q}</span>
                     <span class='shrink-0 rounded-full border px-2 py-0.5 text-xs group-open:hidden'>
                       Show
