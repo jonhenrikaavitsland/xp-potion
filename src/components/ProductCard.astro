@@ -1,0 +1,17 @@
+---
+const { heading, url, description, image } = Astro.props;
+---
+
+<li>
+  <section>
+    <a href={url}>
+      <div class='border'>
+        <div>
+          <img src={image.url} alt={image.alt} />
+        </div>
+        <h2 class='font-bold'>{heading}</h2>
+        <p>{description}</p>
+      </div>
+    </a>
+  </section>
+</li>

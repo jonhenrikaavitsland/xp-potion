@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+
+const allProducts = Object.values(
+  import.meta.glob('./*.md', { eager: true })
+);
+---
+
+<BaseLayout>
+  <div class='lg:container lg:mx-auto py-12 px-5'>
+    <section>
+      <h1>Our Products</h1>
+      <ul
+        class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+      >
+        {
+          allProducts.map((product: any) => (
+            <ProductCard
+              url={product.url}
+              title={product.frontmatter.heading}
+              description={product.frontmatter.description}
+              image={product.frontmatter.image}
+            />
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+</BaseLayout>
