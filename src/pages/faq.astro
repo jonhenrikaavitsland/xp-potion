@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    q: 'What is XP Potion?',
+    a: 'XP Potion is a gamer-focused energy drink inspired by in-game potions. It delivers clean energy, focus, and endurance with ingredients like natural caffeine, L-theanine, taurine, B-vitamins, and electrolytes.',
+  },
+  {
+    q: 'How is XP Potion different from other energy drinks?',
+    a: 'Unlike sugar-heavy energy drinks, XP Potion is balanced and performance-driven. It’s designed for gamers, streamers, and students — combining energy, focus, and hydration without the crash.',
+  },
+  {
+    q: 'Does XP Potion contain sugar?',
+    a: 'No, XP Potion uses low-calorie sweeteners like sucralose and stevia. This means no sugar overload, fewer calories, and no sharp crashes.',
+  },
+  {
+    q: 'How much caffeine is in XP Potion?',
+    a: 'One can of XP Potion Original Boost contains 160 mg of natural caffeine, similar to a strong cup of coffee — enough to boost focus and stamina without overloading.',
+  },
+  {
+    q: 'Is XP Potion safe for everyone?',
+    a: 'XP Potion is intended for healthy adults (18+). It’s not recommended for children, pregnant or breastfeeding women, or individuals sensitive to caffeine.',
+  },
+  {
+    q: 'When should I drink XP Potion?',
+    a: 'It’s perfect for long gaming sessions, esports competitions, studying, streaming, or late-night creative work.',
+  },
+  {
+    q: 'Where can I buy XP Potion?',
+    a: 'XP Potion is available through our official website and select retail partners. Subscriptions (XP Crates) are also available for regular deliveries.',
+  },
+  {
+    q: 'Does XP Potion ship internationally?',
+    a: 'Yes, we currently ship to multiple regions, including Europe, North America, and Asia. Shipping options and costs are shown at checkout.',
+  },
+  {
+    q: 'What varieties are available?',
+    a: 'We offer ready-to-drink cans, concentrated XP Shots, mix-at-home powders, and XP Hydrate electrolyte blends.',
+  },
+  {
+    q: 'What is the XP Points loyalty system?',
+    a: 'Every purchase earns XP Points, which can be redeemed for discounts, merchandise, or exclusive digital perks.',
+  },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: a,
+    },
+  })),
+};
+---
+
+<BaseLayout>
+  <div class='bg-neutral-charcoal-black text-white pb-12'>
+    <div class='lg:container lg:mx-auto py-12 px-5'>
+      <section class='flex flex-col gap-12 max-w-4xl mx-auto'>
+        <div class='flex flex-col gap-2'>
+          <h1 class='text-4xl font-bold'>
+            Frequently Asked Questions
+          </h1>
+          <p class=''>
+            Quick answers about XP Potion — energy, focus,
+            hydration, and more.
+          </p>
+        </div>
+        <div class='flex flex-col gap-4'>
+          {
+            faqs.map(({ q, a }, i) => {
+              const id = `q${i + 1}`;
+              return (
+                <details
+                  id={id}
+                  class='group bg-neutral-800 rounded-2xl border p-4 open:shadow-sm'
+                >
+                  <summary class='flex cursor-pointer items-center justify-between gap-4 text-left text-lg hover:text-xl font-semibold marker:content-none'>
+                    <span class=''>{q}</span>
+                    <span class='shrink-0 rounded-full border px-2 py-0.5 text-xs group-open:hidden'>
+                      Show
+                    </span>
+                    <span class='shrink-0 rounded-full border px-2 py-0.5 text-xs hidden group-open:inline'>
+                      Hide
+                    </span>
+                  </summary>
+                  <div class='mt-3 leading-relaxed'>{a}</div>
+                </details>
+              );
+            })
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
