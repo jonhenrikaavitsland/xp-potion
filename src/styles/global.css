@@ -8,12 +8,16 @@
   --color-accent-neon-pink: #ff2e92;
   --color-accent-magenta-purple: #a020f0;
   --color-accent-deep-violet: #2e003e;
-
-
 }
 
-@layer base {
-  body {
-    text-color: var(--color-neutral-charcoal-black);
+
+@layer utilities {
+  .icon-white {
+    filter: invert(100%)
+            sepia(99%)
+            saturate(2%)
+            hue-rotate(213deg)
+            brightness(106%)
+            contrast(100%);
   }
 }
