@@ -7,7 +7,6 @@ author: 'Team XP Potion'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["Performance & Focus", "Product Comparisons", "Student & Streamer Life"]
 ---
 
 # Energy drinks for gamers: The secret to focus, stamina, and no-crash performance
