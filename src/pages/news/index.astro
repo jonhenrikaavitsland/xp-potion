@@ -1,0 +1,37 @@
+---
+import NewsCard from '../../components/NewsCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+let allNews = Object.values(
+  import.meta.glob('./*.md', { eager: true })
+);
+
+// Sort by date (newest first)
+allNews = allNews.sort((a: any, b: any) => {
+  return (
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime()
+  );
+});
+---
+
+<BaseLayout>
+  <div class='lg:container lg:mx-auto py-12 px-5'>
+    <section class='flex flex-col gap-12'>
+      <div class='border-b pb-4'>
+        <h1 class='font-serif font-bold text-4xl'>News</h1>
+      </div>
+      <ul>
+        {
+          allNews.map((news: any) => (
+            <NewsCard
+              url={news.url}
+              heading={news.frontmatter.heading}
+              date={news.frontmatter.date}
+            />
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+</BaseLayout>
