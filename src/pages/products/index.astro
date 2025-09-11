@@ -5,9 +5,12 @@ import ProductCard from '../../components/ProductCard.astro';
 const allProducts = Object.values(
   import.meta.glob('./*.md', { eager: true })
 );
+
+const description =
+  'Explore all XP Potion products — from energy drinks to hydration blends. Level up your energy, focus, and endurance with gamer-designed formulas.';
 ---
 
-<BaseLayout>
+<BaseLayout title='Products' description={description}>
   <div class='lg:container lg:mx-auto py-12 px-5'>
     <section class='flex flex-col gap-18'>
       <div class='flex flex-col gap-6'>
