@@ -7,7 +7,7 @@ excerpt: A citrus-berry gamer energy drink with 160mg natural caffeine, L-theani
 category: Functional energy drink
 servingSize: 330 ml slim can (standard gamer-friendly format)
 image: 
-  url: "https://docs.astro.build/assets/rose.webp"
+  url: "/src/assets/images/xp-potion-original-boost-product-image.png"
   alt: XP Potion Original Boost energy drink can in citrus-berry fusion flavor, designed for gamers with 160mg natural caffeine, L-theanine, and electrolytes.
 ingredients: Carbonated water, natural fruit flavors (Citrus-Berry Fusion), caffeine (from green coffee bean extract), taurine, L-theanine, niacin (B3), vitamin B6, vitamin B12, electrolytes (sodium chloride, potassium citrate, magnesium lactate), sucralose, stevia, citric acid, natural coloring (purple/blue).
 
