@@ -53,10 +53,10 @@ const allProducts = Object.values(
                       <img
                         src={product.frontmatter.image.url}
                         alt={product.frontmatter.image.alt}
-                        class='rounded-s-xl'
+                        class='rounded-s-xl h-full w-full object-contain'
                       />
                     </div>
-                    <div class='border-t border-e border-b rounded-e-xl p-2 ps-4'>
+                    <div class='flex items-center rounded-e-xl p-2 ps-4'>
                       <p class=''>
                         {product.frontmatter.description}
                       </p>
