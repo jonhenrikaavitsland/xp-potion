@@ -4,9 +4,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const allPosts = Object.values(
   import.meta.glob('../pages/posts/*.md', { eager: true })
 );
+
+const description =
+  'Read the XP Potion blog — guides, tips, and stories for gamers and streamers. Discover performance insights, community updates, and product news.';
 ---
 
-<BaseLayout title='Blog'>
+<BaseLayout title='Blog' description={description}>
   <div class='lg:container lg:mx-auto py-12 px-5'>
     <section class='flex flex-col gap-6'>
       <h1 class='text-4xl font-bold font-serif'>Blog posts</h1>
