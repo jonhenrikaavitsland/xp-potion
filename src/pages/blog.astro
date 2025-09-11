@@ -7,14 +7,24 @@ const allPosts = Object.values(
 ---
 
 <BaseLayout title='Blog'>
-  <section>
-    <h1>Blog posts</h1>
-    <ul>
-      {
-        allPosts.map((post: any) => (
-          <BlogPost url={post.url} title={post.frontmatter.title} />
-        ))
-      }
-    </ul>
-  </section>
+  <div class='lg:container lg:mx-auto py-12 px-5'>
+    <section class='flex flex-col gap-6'>
+      <h1 class='text-4xl font-bold font-serif'>Blog posts</h1>
+      <ul
+        class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+      >
+        {
+          allPosts.map((post: any) => (
+            <BlogPost
+              url={post.url}
+              title={post.frontmatter.title}
+              excerpt={post.frontmatter.description}
+              image={post.frontmatter.image}
+              heading={post.frontmatter.heading}
+            />
+          ))
+        }
+      </ul>
+    </section>
+  </div>
 </BaseLayout>

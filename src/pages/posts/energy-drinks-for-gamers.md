@@ -1,11 +1,12 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Energy drinks for gamers: The secret to focus, stamina, and no-crash performance"
+title: Energy drinks for gamers
+heading: "Energy drinks for gamers: The secret to focus, stamina, and no-crash performance"
 pubDate: 2025-09-09
 description: 'Discover the best energy drinks for gamers. Learn how to boost focus, endurance, and hydration with no crash — a healthy alternative to G Fuel.'
 author: 'Team XP Potion'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
+    url: '/src/assets/images/hero-gamer-with-a-glowing-xp-potion-can.jpg'
     alt: 'The Astro logo on a dark background with a pink glow.'
 ---
 

@@ -17,7 +17,9 @@ const { frontmatter } = Astro.props;
       width='300'
       alt={frontmatter.image.alt}
     />
-    <article class='prose prose-lg mx-auto mt-6 pt-2 border-t'>
+    <article
+      class='prose prose-lg mx-auto mt-6 pt-2 border-t prose-invert'
+    >
       <slot />
     </article>
   </div>
