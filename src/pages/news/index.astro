@@ -24,13 +24,16 @@ const description =
       <div class='border-b pb-4'>
         <h1 class='font-serif font-bold text-4xl'>News</h1>
       </div>
-      <ul class='flex flex-col gap-6'>
+      <ul
+        class='flex flex-col gap-6 md:max-w-min md:whitespace-nowrap'
+      >
         {
-          allNews.map((news: any) => (
+          allNews.map((news: any, i) => (
             <NewsCard
               url={news.url}
               heading={news.frontmatter.heading}
               date={news.frontmatter.date}
+              index={i}
             />
           ))
         }

@@ -1,5 +1,5 @@
 ---
-const { heading, date, url } = Astro.props;
+const { heading, date, url, index } = Astro.props;
 
 // Format the date for display
 const formattedDate = new Date(date).toLocaleDateString('en-US', {
@@ -11,7 +11,13 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', {
 
 <li>
   <a href={url}>
-    <div class='flex gap-6 bg-neutral-800 p-4 rounded-xl'>
+    <div
+      class=`flex flex-col md:flex-row text-center md:text-start items-center md:items-start gap-6 bg-neutral-800 py-4 px-6 rounded-xl border-x-2 md:border-x-0 md:border-s-2 transition-colors
+duration-300 ease-in-out hover:border-accent-neon-pink ${ index === 0
+    ? 'border-accent-magenta-purple'
+    : 'border-accent-magenta-purple/60'
+}`
+    >
       <time datetime={date} class='w-38'>{formattedDate}</time>
       <p>{heading}</p>
     </div>
