@@ -13,9 +13,12 @@ allNews = allNews.sort((a: any, b: any) => {
     new Date(a.frontmatter.date).getTime()
   );
 });
+
+const description =
+  'Stay updated with XP Potion news — discover the latest product launches, streamer collabs, esports partnerships, and community updates all in one place.';
 ---
 
-<BaseLayout>
+<BaseLayout title='News' description={description}>
   <div class='lg:container lg:mx-auto py-12 px-5'>
     <section class='flex flex-col gap-12'>
       <div class='border-b pb-4'>
