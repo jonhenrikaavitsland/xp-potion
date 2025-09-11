@@ -19,8 +19,8 @@ const { frontmatter } = Astro.props;
       <section class='flex flex-col gap-4 grow'>
         <h1 class='font-bold text-2xl'>{frontmatter.heading}</h1>
         <p>{frontmatter.excerpt}</p>
-        <div class='bg-slate-100 p-5 rounded-xl italic'>
-          <p class='text-sm text-black/70'>
+        <div class='bg-neutral-800 p-5 rounded-xl italic'>
+          <p class='text-sm text-white/60'>
             <span class='font-semibold capitalize'
               >ingredients:
             </span>{frontmatter.ingredients}
@@ -31,7 +31,7 @@ const { frontmatter } = Astro.props;
       </section>
     </div>
     <article
-      class='prose prose-lg mx-auto max-w-none mt-6 pt-2 border-t'
+      class='prose prose-lg mx-auto max-w-none mt-6 pt-2 border-t text-white'
     >
       <slot />
     </article>
