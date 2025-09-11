@@ -6,11 +6,11 @@ const { url, excerpt, image, heading } = Astro.props;
   <section class='rounded-xl shadow-md'>
     <a href={url}>
       <div class='border flex flex-col gap-2 pb-3 rounded-xl'>
-        <div class='rounded-t-xl'>
+        <div class='rounded-t-xl aspect-square'>
           <img
             src={image.url}
             alt={image.alt}
-            class='rounded-t-xl'
+            class='rounded-t-xl h-full w-full object-contain'
           />
         </div>
         <div class='flex flex-col gap-2 p-3'>
