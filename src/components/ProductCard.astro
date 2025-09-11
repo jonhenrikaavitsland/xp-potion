@@ -1,11 +1,5 @@
 ---
-import { Image } from 'astro:assets';
-import { getEntry } from 'astro:content';
-
 const { url, excerpt, image, heading } = Astro.props;
-const { entry } = Astro.props;
-
-const asset = await getEntry(entry.image.url);
 ---
 
 <li>
@@ -13,17 +7,11 @@ const asset = await getEntry(entry.image.url);
     <a href={url}>
       <div class='border flex flex-col gap-2 pb-3 rounded-xl'>
         <div class='rounded-t-xl'>
-          <Image
-            src={asset}
-            alt='XP Potion'
-            widths={[100, 200, 300, 400]}
-            format='png'
-          />
-          <!-- <img
+          <img
             src={image.url}
             alt={image.alt}
             class='rounded-t-xl'
-          /> -->
+          />
         </div>
         <div class='flex flex-col gap-2 p-3'>
           <h2 class='font-bold'>{heading}</h2>

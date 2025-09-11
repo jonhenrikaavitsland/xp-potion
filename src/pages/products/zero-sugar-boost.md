@@ -7,7 +7,7 @@ excerpt: Glacier Lime gamer energy drink with 160mg natural caffeine, L-theanine
 category: Functional Energy Drink (sugar-free)
 servingSize: 330 ml slim can (standard gamer-friendly format)
 image: 
-  url: "../../content/assets/xp-boost-zero-sugar-boost-product-image.png"
+  url: "../../assets/images/xp-boost-zero-sugar-boost-product-image.png"
   alt: XP Potion Zero Sugar Boost gamer energy drink can in Glacier Lime flavor with 160mg natural caffeine, L-theanine, and electrolytes — sugar-free.
 ingredients: Carbonated water, natural fruit flavors (Glacier Lime), caffeine (from green coffee bean extract), taurine, L-theanine, niacin (B3), vitamin B6, vitamin B12, electrolytes (sodium chloride, potassium citrate, magnesium lactate), sucralose, stevia, citric acid, natural coloring (clear/green).
 
