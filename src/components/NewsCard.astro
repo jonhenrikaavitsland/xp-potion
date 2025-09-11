@@ -11,8 +11,8 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', {
 
 <li>
   <a href={url}>
-    <div class='flex gap-6'>
-      <time datetime={date}>{formattedDate}</time>
+    <div class='flex gap-6 bg-neutral-800 p-4 rounded-xl'>
+      <time datetime={date} class='w-38'>{formattedDate}</time>
       <p>{heading}</p>
     </div>
   </a>
