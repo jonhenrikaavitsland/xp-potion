@@ -12,7 +12,8 @@ const navLinks = [
 ---
 
 <header
-  class='flex flex-col sticky top-0 bg-accent-magenta-purple shadow-md'
+  class='flex flex-col sticky top-0 bg-accent-magenta-purple shadow-md transition-all duration-300 will-change-transform'
+  id='site-header'
 >
   <div
     class='flex justify-between flex-wrap md:flex-nowrap md:justify-normal px-5 py-2 lg:container lg:mx-auto'
@@ -97,6 +98,13 @@ const navLinks = [
   </div>
 </header>
 <style>
+  /* Smoothly slide the header out and disable interactions */
+  .header--hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
   details[open] .open-icon {
     display: none;
   }
@@ -120,3 +128,65 @@ const navLinks = [
     }
   }
 </style>
+<script is:inline>
+  (() => {
+    const header = document.getElementById('site-header');
+    if (!header) return;
+
+    const HIDE_AFTER_MS = 1000; // 1s delay
+    const THRESHOLD = 200; // 200px scroll
+    let timer = null;
+    let hidden = false;
+
+    const hasOpenMenus = () =>
+      !!document.querySelector('details[open]');
+
+    const scheduleHide = () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (window.scrollY > THRESHOLD && !hasOpenMenus()) {
+          header.classList.add('header--hidden');
+          hidden = true;
+        }
+      }, HIDE_AFTER_MS);
+    };
+
+    const showNow = () => {
+      clearTimeout(timer);
+      if (hidden) {
+        header.classList.remove('header--hidden');
+        hidden = false;
+      }
+    };
+
+    // Show when user is near the top; schedule hide when beyond threshold
+    const onScroll = () => {
+      if (window.scrollY <= THRESHOLD) {
+        showNow();
+      } else {
+        scheduleHide();
+      }
+    };
+
+    // If a mobile <details> menu opens, keep header visible
+    document.addEventListener(
+      'toggle',
+      (e) => {
+        const t = e.target;
+        if (t instanceof HTMLDetailsElement) {
+          if (t.open) showNow();
+          else onScroll();
+        }
+      },
+      true
+    );
+
+    // Also reveal header on pointer move near the top edge
+    window.addEventListener('mousemove', (e) => {
+      if (e.clientY < 80) showNow();
+    });
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
