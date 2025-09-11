@@ -19,9 +19,11 @@ import '../styles/global.css';
     <title>{title} | XP Potion</title>
     <meta name='robots' content='noindex, nofollow' />
   </head>
-  <body class='flex flex-col min-h-screen'>
+  <body
+    class='flex flex-col min-h-screen bg-neutral-charcoal-black'
+  >
     <Header />
-    <main class='grow bg-neutral-charcoal-black text-white'>
+    <main class='grow text-white'>
       <slot />
     </main>
     <Footer />
