@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import notFoundImg from '../assets/images/xp-potion-404.png'; // adjust path if needed
+---
+
+<BaseLayout
+  title='404 - Page not found'
+  description='This page does not exist.'
+>
+  <section
+    class='flex min-h-screen flex-col items-center justify-center text-center px-6'
+  >
+    <div class='max-w-4xl'>
+      <Image
+        src={notFoundImg}
+        alt='404 - Potion not found'
+        widths={[300, 600, 900]}
+      />
+    </div>
+
+    <div class='flex flex-col gap-2'>
+      <h1
+        class='mt-6 text-4xl font-extrabold text-accent-magenta-purple'
+      >
+        Page not found
+      </h1>
+      <p class='mt-2 text-gray-400'>
+        Oops! Looks like this potion doesn’t exist.
+      </p>
+    </div>
+
+    <a
+      href='/'
+      class='mt-6 inline-block rounded-lg bg-accent-magenta-purple px-6 py-4 font-bold text-white shadow hover:bg-accent-neon-pink transition-colors'
+    >
+      Back to Home
+    </a>
+  </section>
+</BaseLayout>
