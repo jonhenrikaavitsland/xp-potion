@@ -1,0 +1,30 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
+  <div class='lg:container lg:mx-auto px-3 py-12'>
+    <div class='flex flex-col md:flex-row gap-6'>
+      <div class='grow'>
+        <img
+          src={frontmatter.image.url}
+          alt={frontmatter.image.alt}
+        />
+      </div>
+      <section class='flex flex-col gap-4 grow'>
+        <h1 class='font-bold text-2xl'>{frontmatter.heading}</h1>
+        <p>{frontmatter.description}</p>
+      </section>
+    </div>
+    <article
+      class='prose prose-lg mx-auto mt-6 pt-2 border-t prose-invert'
+    >
+      <slot />
+    </article>
+  </div>
+</BaseLayout>
