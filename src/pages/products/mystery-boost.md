@@ -10,7 +10,7 @@ image:
   url: "/assets/images/xp-boost-mystery-boost-product-image.png"
   alt: XP Potion Mystery Boost limited-edition gamer energy drink can with 160mg natural caffeine, L-theanine, and electrolytes — secret flavor undisclosed.
 ingredients: Carbonated water, citric acid, natural caffeine (160 mg), taurine, L-theanine, electrolytes (sodium, potassium, magnesium), B-vitamins (B3, B6, B12), natural flavors, sweeteners (sucralose, stevia), natural fruit and vegetable extracts for color.
-
+id: 3
 
 ---
 
