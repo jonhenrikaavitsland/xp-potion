@@ -45,10 +45,17 @@ const allProducts = Object.values(
         </p>
         <ul class='space-y-4'>
           {
-            allProducts.map((product: any) => (
+            allProducts.map((product: any, index) => (
               <li>
                 <a href={product.url} target='_self'>
-                  <div class='flex rounded-xl bg-neutral-800'>
+                  <div
+                    class={`flex rounded-xl bg-neutral-800 border-x-2 lg:border-x-0 lg:border-s-2 transition-colors
+duration-300 ease-in-out hover:border-accent-neon-pink hover:bg-neutral-700 ${
+                      index === 0
+                        ? 'border-accent-magenta-purple'
+                        : 'border-accent-magenta-purple/60'
+                    }`}
+                  >
                     <div class='h-20 aspect-square rounded-s-xl'>
                       <img
                         src={product.frontmatter.image.url}
