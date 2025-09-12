@@ -1,21 +1,15 @@
 ---
-const allNews = [
-  {
-    title: 'Some news title',
-    excerpt:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-  },
-  {
-    title: 'Some news title',
-    excerpt:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. At ea obcaecati soluta',
-  },
-  {
-    title: 'Some news title',
-    excerpt:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. At ea obcaecati soluta enim nobis consequatur',
-  },
-];
+let allNews = Object.values(
+  import.meta.glob('../pages/news/*.md', { eager: true })
+);
+
+// Sort by date (newest first)
+allNews = allNews.sort((a: any, b: any) => {
+  return (
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime()
+  );
+});
 ---
 
 <div
@@ -52,16 +46,16 @@ const allNews = [
       </h2>
       <ul class='flex flex-col gap-4'>
         {
-          allNews.map((news, i) => (
+          allNews.map((news: any, i) => (
             <li>
-              <a href='#' target='_self'>
+              <a href={news.url} target='_self'>
                 <section
                   class={`flex flex-col gap-1 rounded-xl p-4 border-s-2 transition-colors duration-300 ease-in-out hover:border-accent-neon-pink ${i === 0 ? 'bg-accent-magenta-purple/20 border-accent-magenta-purple' : 'bg-accent-magenta-purple/10 border-accent-magenta-purple/80'}`}
                 >
                   <h3 class='text-xl font-semibold font-serif'>
-                    {news.title}
+                    {news.frontmatter.heading}
                   </h3>
-                  <p>{news.excerpt}</p>
+                  <p>{news.frontmatter.excerpt}</p>
                 </section>
               </a>
             </li>

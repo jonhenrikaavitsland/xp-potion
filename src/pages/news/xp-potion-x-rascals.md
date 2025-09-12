@@ -3,9 +3,10 @@ layout: ../../layouts/NewsLayout.astro
 title: XP Potion x Rascals
 heading: "XP Potion x Rascals: Powering the Next Generation of Esports"
 date: 2025-09-08
+excerpt: A sponsorship built on community, authenticity, and shared passion for gaming culture. From the very...
 image:
-  url:
-  alt:
+  url: /assets/images/xp-potion-rascals-esports-team-energy-drink.jpg
+  alt: XP Potion teams up with Rascals Esports — powering their players with clean energy, focus, and endurance for competitive gaming.
 description: 
 
 ---
@@ -25,6 +26,8 @@ The Rascals aren’t just another team.
 They’re fierce competitors, fearless creators, and unapologetic gamers who live and breathe the culture — the exact qualities that define XP Potion. 
 
 Together, we’re not just putting logos on jerseys; we’re creating a movement that blends performance, community, and authentic gaming energy.
+
+![XP Potion and Rascals Esports partnership graphic featuring the Rascals raccoon team logo.](/assets/images/xp-potion-rascals-esports-partnership.jpg)
 
 ## Why Rascals?
 
@@ -63,6 +66,8 @@ Expect to see:
 When we say community-first, we mean it. 
 
 This partnership is as much about the players and fans as it is about the brands.
+
+![XP Potion energy drink lineup featuring Original Boost, Zero Sugar Boost, and Mystery Boost cans with fantasy-inspired gaming artwork in the background.](/assets/images/xp-potion-original-boost-zero-sugar-boost-mystery-boost-cans.jpg)
 
 ## Fueling the Grind
 

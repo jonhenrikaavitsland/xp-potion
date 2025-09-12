@@ -3,6 +3,7 @@ layout: ../../layouts/NewsLayout.astro
 title: XP Potion has landed
 heading: "XP Potion has landed: Fuel your next level"
 date: 2025-09-01
+excerpt: "We built XP Potion because the old-school energy drinks felt like NPCs: out of touch out of touch, overloaded..."
 image:
   url:
   alt:

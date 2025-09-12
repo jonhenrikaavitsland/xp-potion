@@ -3,6 +3,7 @@ layout: ../../layouts/NewsLayout.astro
 title: Can you guess the boost
 heading: "Can you guess the boost?: XP Potion launches mystery flavor challenge"
 date: 2025-09-15
+excerpt: Not all potions reveal their secrets. Enter XP Potion – Mystery Boost, our brand-new limited-edition...
 image:
   url:
   alt:
