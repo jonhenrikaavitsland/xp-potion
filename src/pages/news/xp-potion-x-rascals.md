@@ -27,7 +27,10 @@ They’re fierce competitors, fearless creators, and unapologetic gamers who liv
 
 Together, we’re not just putting logos on jerseys; we’re creating a movement that blends performance, community, and authentic gaming energy.
 
-![XP Potion and Rascals Esports partnership graphic featuring the Rascals raccoon team logo.](/assets/images/xp-potion-rascals-esports-partnership.jpg)
+<figure>
+  <img src="/assets/images/xp-potion-rascals-esports-partnership.jpg" alt="XP Potion and Rascals Esports partnership graphic featuring the Rascals raccoon team logo" />
+  <figcaption class="italic text-md">XP Potion joins forces with Rascals Esports, uniting energy, focus, and gaming culture.</figcaption>
+</figure>
 
 ## Why Rascals?
 
@@ -67,7 +70,10 @@ When we say community-first, we mean it.
 
 This partnership is as much about the players and fans as it is about the brands.
 
-![XP Potion energy drink lineup featuring Original Boost, Zero Sugar Boost, and Mystery Boost cans with fantasy-inspired gaming artwork in the background.](/assets/images/xp-potion-original-boost-zero-sugar-boost-mystery-boost-cans.jpg)
+<figure>
+  <img src="/assets/images/xp-potion-original-boost-zero-sugar-boost-mystery-boost-cans.jpg" alt="XP Potion energy drink lineup featuring Original Boost, Zero Sugar Boost, and Mystery Boost cans with fantasy-inspired gaming artwork in the background" />
+  <figcaption class="italic text-md">The XP Potion collection — Original Boost, Zero Sugar Boost, and Mystery Boost — gamer energy drinks crafted for focus, endurance, and hydration.</figcaption>
+</figure>
 
 ## Fueling the Grind
 
