@@ -4,7 +4,7 @@ import ProductCard from '../../components/ProductCard.astro';
 
 const allProducts = Object.values(
   import.meta.glob('./*.md', { eager: true })
-).sort((a: any, b: any) => b.frontmatter.id - a.frontmatter.id);
+).sort((a: any, b: any) => a.frontmatter.id - b.frontmatter.id);
 
 const description =
   'Explore all XP Potion products — from energy drinks to hydration blends. Level up your energy, focus, and endurance with gamer-designed formulas.';
