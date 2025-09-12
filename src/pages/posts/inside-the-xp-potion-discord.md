@@ -6,8 +6,8 @@ pubDate: 2025-09-12
 description: 'Discover how the XP Potion Discord unites gamers worldwide with events, challenges, and a thriving gaming community. Join the fun today!'
 author: 'Team XP Potion'
 image:
-    url: '/assets/images/hero-gamer-with-a-glowing-xp-potion-can.jpg'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    url:
+    alt:
 ---
 
 # Inside the XP Potion Discord: How Gamers Build Community
