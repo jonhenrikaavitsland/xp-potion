@@ -6,8 +6,8 @@ pubDate: 2025-09-09
 description: 'Discover the best energy drinks for gamers. Learn how to boost focus, endurance, and hydration with no crash — a healthy alternative to G Fuel.'
 author: 'Team XP Potion'
 image:
-    url: '/assets/images/hero-gamer-with-a-glowing-xp-potion-can.jpg'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    url: '/assets/images/xp-potion-original-boost-gamer-drinking-energy-drink.jpg'
+    alt: 'Gamer wearing headset drinking XP Potion Original Boost energy drink at a gaming setup with RGB lighting.'
 ---
 
 # Energy drinks for gamers: The secret to focus, stamina, and no-crash performance
