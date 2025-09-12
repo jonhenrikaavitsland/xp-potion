@@ -1,71 +1,76 @@
 ---
 layout: ../../layouts/NewsLayout.astro
-title: Can you guess the boost
-heading: "Can you guess the boost?: XP Potion launches mystery flavor challenge"
+title: Can You Guess the Boost?
+heading: "Can You Guess the Boost? XP Potion Launches Mystery Flavour Challenge"
 date: 2025-09-15
 excerpt: Not all potions reveal their secrets. Enter XP Potion – Mystery Boost, our brand-new limited-edition...
 image:
-  url:
-  alt:
+  url: /assets/images/xp-potion-mystery-boost-limited-edition-gamer-energy-drink.png
+  alt: XP Potion Mystery Boost limited-edition gamer energy drink can in neon purple design with glowing gaming icons
 description: 
 
 ---
 
-# Can you guess the boost?: XP Potion launches mystery flavor challenge
+# Can You Guess the Boost? XP Potion Launches Mystery Flavour Challenge
 
-Not all potions reveal their secrets. 
+Not all potions reveal their secrets.
 
-Enter XP Potion – Mystery Boost, our brand-new limited-edition energy drink that dares gamers, streamers, and esports fans to do what they do best: solve the quest. 
+Enter XP Potion – Mystery Boost, our brand-new limited-edition energy drink that dares gamers, streamers, and esports fans to do what they do best: solve the quest.
 
-On the outside, Mystery Boost glows with bold purple and pink vibes. 
+On the outside, Mystery Boost glows with bold purple and pink vibes.
 
 On the inside? 
 
 That’s where the real adventure begins. 
 
-Each can is packed with 160 mg of natural caffeine, L-theanine for smooth focus, and essential electrolytes— the same clean energy and hydration you know from our core lineup. 
+Each can is packed with 160 mg of natural caffeine, L-theanine for smooth focus, and essential electrolytes— the same clean energy and hydration you know from our core lineup.
 
 But this time, the taste itself is part of the game.
 
-## A Flavor Hidden in Plain Sight
+## A Flavour Hidden in Plain Sight 
 
-Crack open a can and you’ll be hit with something bold, fruity, and a little bit exotic. 
+Crack open a can and you’ll be hit with something bold, fruity, and a little bit exotic.
 
-Is it dragon fruit? 
+Is it dragonfruit? 
 
-Strawberry? 
+Strawberry?
 
 Kiwi? 
 
-Or maybe a mix of all three? 
+Or maybe a mix of all three?
 
 We’re not telling. 
 
-Mystery Boost is designed to keep you guessing, with a flavor that shifts and surprises every time you take a sip. 
+Mystery Boost is designed to keep you guessing, with a flavour that shifts and surprises every time you take a sip. 
 
 The only way to solve it is together.
 
+<figure>
+  <img src="/assets/images/xp-potion-mystery-boost-gamer-energy-drink-neon-design.jpg" alt="XP Potion Mystery Boost gamer energy drink can with glowing neon purple and pink design, surrounded by gaming icons" />
+  <figcaption class="italic text-md">XP Potion Mystery Boost — a neon-inspired limited-edition energy drink for gamers, blending performance, focus, and mystery flavor fun.</figcaption>
+</figure>
+
 ## The Community Challenge
 
-The XP Potion community is the key to unlocking the truth. 
+The XP Potion community is the key to unlocking the truth.
 
-Players, streamers, and esports fans are invited to share their guesses online, join the conversation, and help crack the code. 
+Players, streamers, and esports fans are invited to share their guesses online, join the conversation, and help crack the code.
 
 Along the way, fans will have chances to:
 
-- Win prizes and exclusive XP Potion gear.
+- Win prizes and exclusive XP Potion gear
 
-- Unlock XP rewards for sharing guesses and content.
+- Unlock XP rewards for sharing guesses and content
 
-- Vote on the next official release once the mystery is revealed.
+- Vote on the next official release once the mystery is revealed
 
-This isn’t just a flavor drop — it’s a campaign built around collaboration, hype, and the thrill of discovery.
+This isn’t just a flavour drop — it’s a campaign built around collaboration, hype, and the thrill of discovery.
 
 ## More Than a Drink, It’s a Quest
 
-XP Potion has always been about more than just energy. 
+XP Potion has always been about more than just energy.
 
-It’s about making everyday life feel like a game, with potions, quests, and rewards that connect directly to gaming culture. 
+It’s about making everyday life feel like a game, with potions, quests, and rewards that connect directly to gaming culture.
 
 Mystery Boost takes that philosophy and turns it into a real-world event: one can, one community, one collective quest to solve the mystery.
 
@@ -73,9 +78,9 @@ Mystery Boost takes that philosophy and turns it into a real-world event: one ca
 
 Mystery Boost is available now in limited quantities. 
 
-Grab a can, taste the unknown, and join the hunt. 
+Grab a can, taste the unknown, and join the hunt.
 
-Post your guesses, share your reactions, and see if you have what it takes to unlock the secret flavor. 
+Post your guesses, share your reactions, and see if you have what it takes to unlock the secret flavour.
 
 Because in the world of XP Potion, every sip is XP — and this one just might level you up.
 
