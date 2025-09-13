@@ -89,7 +89,7 @@ export default function ContactForm() {
           </div>
           <button
             type='submit'
-            className='bg-accent-magenta-purple text-white w-full rounded-lg py-2 px-4 cursor-pointer font-semibold capitalize hover:bg-accent-magenta-purple/90'
+            className='bg-accent-magenta-purple w-full rounded-lg py-2 px-4 cursor-pointer font-semibold capitalize hover:bg-accent-magenta-purple/90'
             >send message</button>
           <p className="text-sm">We respect your privacy. Your information will only be used to respond to your inquiry. For more details, see our <a href="/privacy-policy" target="_self" className="text-accent-neon-pink hover:text-accent-magenta-purple">privacy policy</a></p>
         </form>)}
