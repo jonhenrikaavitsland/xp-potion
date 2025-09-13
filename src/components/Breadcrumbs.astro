@@ -1,0 +1,122 @@
+---
+/**
+ * Auto Breadcrumbs for Astro (Tailwind 4.1 friendly)
+ *
+ * Props (all optional):
+ * - showHome: boolean = true
+ * - homeHref: string = "/"
+ * - homeLabel: string = "Home"
+ * - exclude: string[]           // segments to hide (e.g., ["page", "index"])
+ * - labelMap: Record<string,string> // override labels for specific segments
+ * - toTitleCase: boolean = true // transform labels like "original-boost" -> "Original Boost"
+ *
+ * Examples:
+ * <BreadcrumbsAuto />
+ * <BreadcrumbsAuto exclude={["page"]} labelMap={{ "xp": "XP Potion" }} />
+ */
+
+interface Props {
+  showHome?: boolean;
+  homeHref?: string;
+  homeLabel?: string;
+  exclude?: string[];
+  labelMap?: Record<string, string>;
+  toTitleCase?: boolean;
+}
+
+const {
+  showHome = true,
+  homeHref = '/',
+  homeLabel = 'Home',
+  exclude = [],
+  labelMap = {},
+  toTitleCase = true,
+} = Astro.props as Props;
+
+const url = new URL(Astro.request.url);
+
+// Normalize pathname: remove trailing slash except for root
+const pathname = url.pathname.replace(/\/+$/,'/') === '/' ? '/' : url.pathname.replace(/\/+$/,'');
+const rawSegments = pathname.split('/').filter(Boolean);
+
+// Filter & label
+function humanize(seg: string) {
+  if (labelMap[seg]) return labelMap[seg];
+  if (!toTitleCase) return seg;
+  return seg
+    .replace(/[-_]+/g, ' ')
+    .replace(/\b\w/g, (m) => m.toUpperCase());
+}
+
+const segments = rawSegments.filter((s) => !exclude.includes(s));
+
+// Build crumb list with cumulative hrefs
+type Crumb = { href?: string; label: string };
+const items: Crumb[] = segments.map((seg, i) => {
+  const href = '/' + segments.slice(0, i + 1).join('/') + '/';
+  const isLast = i === segments.length - 1;
+  return { href: isLast ? undefined : href, label: humanize(seg) };
+});
+
+// JSON-LD
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    ...(showHome ? [{
+      '@type': 'ListItem',
+      position: 1,
+      name: homeLabel,
+      item: homeHref
+    }] : []),
+    ...items.map((c, i) => ({
+      '@type': 'ListItem',
+      position: (showHome ? i + 2 : i + 1),
+      name: c.label,
+      ...(c.href ? { item: c.href } : {})
+    })),
+  ],
+};
+---
+
+{(showHome || items.length > 0) && (
+  <nav aria-label="Breadcrumb" class="w-full">
+    <ol
+      class="flex flex-wrap items-center gap-2 text-sm text-neutral-300"
+      itemscope
+      itemtype="https://schema.org/BreadcrumbList"
+    >
+      {showHome && (
+        <li class="inline-flex items-center gap-2" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href={homeHref} class="hover:underline underline-offset-4 inline-flex items-center gap-1" itemprop="item">
+            <span itemprop="name">{homeLabel}</span>
+          </a>
+          <meta itemprop="position" content="1" />
+          {items.length > 0 && <span class="opacity-60 select-none">/</span>}
+        </li>
+      )}
+
+      {items.map((c, i) => {
+        const isLast = i === items.length - 1;
+        const pos = (showHome ? i + 2 : i + 1);
+        return (
+          <li class="inline-flex items-center gap-2" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            {(!isLast && c.href) ? (
+              <a href={c.href} class="hover:underline underline-offset-4" itemprop="item">
+                <span itemprop="name">{c.label}</span>
+              </a>
+            ) : (
+              <span class="text-white/90 font-medium" aria-current="page" itemprop="name">{c.label}</span>
+            )}
+            <meta itemprop="position" content={String(pos)} />
+            {!isLast && <span class="opacity-60 select-none">/</span>}
+          </li>
+        );
+      })}
+    </ol>
+
+    <script type="application/ld+json">
+      {JSON.stringify(jsonLd)}
+    </script>
+  </nav>
+)}
