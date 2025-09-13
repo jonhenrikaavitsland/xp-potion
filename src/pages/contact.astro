@@ -1,11 +1,47 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.js';
+
+const description =
+  'Get in touch with XP Potion — the energy drink for gamers who crave focus, endurance, and zero crash. Check our FAQ for quick answers or contact us directly to level up your energy and gaming experience';
 ---
 
-<BaseLayout>
-  <div>
-    <section>
-      <h1>Contact</h1>
-    </section>
+<BaseLayout title='Contact' description={description}>
+  <div class='lg:container lg:mx-auto py-12 px-5'>
+    <div class='grid grid-cols-2 gap-12'>
+      <section
+        class='flex flex-col gap-4 col-span-full lg:col-span-1 max-w-xl'
+      >
+        <h1 class='capitalize font-serif font-bold text-4xl'>
+          contact us
+        </h1>
+        <div class='flex flex-col gap-2'>
+          <p>
+            Got a question, a wild idea, or just want to say “gg”?
+            We’d love to hear from you!
+          </p>
+          <p>Before you fire odd a message:</p>
+          <a
+            href='/faq'
+            class='bg-neutral-800 p-4 rounded-xl block max-w-min whitespace-nowrap border-s-2 transition-colors
+duration-300 ease-in-out border-accent-magenta-purple hover:border-accent-neon-pink'
+          >
+            Check out our FAQ-page
+          </a>
+          <p>
+            A lot of the most-asked questions are already answered
+            there (kind of like a walkthrough guide for our
+            community).
+          </p>
+          <p>
+            Didn’t find what you were looking for? No worries — drop
+            us a line and we’ll get back to you faster than a
+            speedrun PB.
+          </p>
+          <p>Use the form below to send your message.</p>
+        </div>
+      </section>
+      <ContactForm client:load />
+    </div>
   </div>
 </BaseLayout>
