@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const description =
@@ -6,123 +7,128 @@ const description =
 ---
 
 <BaseLayout title='Terms of Service' description={description}>
-  <div class='lg:container lg:mx-auto py-12 px-5'>
-    <section class='flex flex-col gap-6'>
-      <div class='flex flex-col gap-1'>
-        <h1 class='font-serif font-bold text-4xl'>
-          Terms of Service
-        </h1>
-        <p class='italic'>Last updated September 11, 2025</p>
-      </div>
-      <div class='flex flex-col gap-3'>
-        <h2 class='capitalize font-serif font-semibold text-2xl'>
-          ⚠️ important notice
-        </h2>
-        <p class='font-semibold'>
-          XP Potion is not a real company. This website and its
-          content are part of a school project created for
-          educational purposes only. The products, campaigns, and
-          brand descriptions presented on this site are fictional
-          and not actually offered for sale. No commercial activity,
-          transactions, or product deliveries are carried out
-          through this website.
-        </p>
-        <p>
-          By continuing to view this site, you acknowledge that it
-          is a learning exercise only and not a commercial service.
-        </p>
-      </div>
-      <div class='flex flex-col gap-3'>
-        <h2 class='capitalize font-serif font-semibold text-2xl'>
-          educational purposes only
-        </h2>
-        <p>
-          The XP Potion website exists solely as a student project
-          and does not represent a real business.
-        </p>
-        <ul class='list-disc list-inside'>
-          <li>
-            Any descriptions of products, flavours, campaigns, or
-            promotions are fictional examples.
-          </li>
-          <li>
-            No items are available for purchase, and no real
-            transactions take place.
-          </li>
-          <li>
-            All creative elements were developed for educational
-            demonstration.
-          </li>
-        </ul>
-      </div>
-      <div class='flex flex-col gap-3'>
-        <h2 class='capitalize font-serif font-semibold text-2xl'>
-          use <span class='lowercase'>of the</span> website
-        </h2>
-        <ul class='list-disc list-inside'>
-          <li>
-            You may browse this site for educational or illustrative
-            purposes only.
-          </li>
-          <li>
-            No part of this project may be used for commercial
-            purposes.
-          </li>
-          <li>
-            All content (text, graphics, images, and logos) was
-            created or adapted for demonstration within the scope of
-            the school project.
-          </li>
-        </ul>
-      </div>
-      <div class='flex flex-col gap-3'>
-        <h2 class='capitalize font-serif font-semibold text-2xl'>
-          no products <span class='lowercase'>or</span> services offered
-        </h2>
-        <p>
-          XP Potion does not sell energy drinks, supplements, or any
-          other products. Any references to flavors, ingredients, or
-          campaigns (such as “Original Boost,” “Zero Sugar Boost,”
-          or “Mystery Boost”) are fictionalized examples created to
-          illustrate branding and marketing concepts.
-        </p>
-      </div>
-      <div class='flex flex-col gap-3'>
-        <h2 class='capitalize font-serif font-semibold text-2xl'>
-          no liability
-        </h2>
-        <p>
-          Since XP Potion is not a real company, no liability,
-          warranty, or responsibility is accepted for the use of the
-          information presented. This website should not be relied
-          upon for actual product development, nutrition, or
-          marketing decisions.
-        </p>
-      </div>
-      <div class='flex flex-col gap-3'>
-        <h2 class='capitalize font-serif font-semibold text-2xl'>
-          governing context
-        </h2>
-        <p>
-          This project was created for educational purposes at <a
-            href='https://www.noroff.no/'
-            target='_blank'
-            class='text-accent-neon-pink hover:text-accent-magenta-purple'
-            >Noroff School of Technology and Digital Media</a
-          >. These Terms are intended only to clarify the fictional
-          and non-commercial nature of this project.
-        </p>
-      </div>
-      <div class='flex flex-col gap-3'>
-        <h2 class='capitalize font-serif font-semibold text-2xl'>
-          contact
-        </h2>
-        <p>
-          Any contact details shown on this site (such as email,
-          phone, or address) are placeholders and should not be used
-          to attempt contact.
-        </p>
-      </div>
-    </section>
+  <div class='lg:container lg:mx-auto pt-2 pb-12 px-5'>
+    <Breadcrumbs />
+    <div class='pt-10'>
+      <section class='flex flex-col gap-6'>
+        <div class='flex flex-col gap-1'>
+          <h1 class='font-serif font-bold text-4xl'>
+            Terms of Service
+          </h1>
+          <p class='italic'>Last updated September 11, 2025</p>
+        </div>
+        <div class='flex flex-col gap-3'>
+          <h2 class='capitalize font-serif font-semibold text-2xl'>
+            ⚠️ important notice
+          </h2>
+          <p class='font-semibold'>
+            XP Potion is not a real company. This website and its
+            content are part of a school project created for
+            educational purposes only. The products, campaigns, and
+            brand descriptions presented on this site are fictional
+            and not actually offered for sale. No commercial
+            activity, transactions, or product deliveries are
+            carried out through this website.
+          </p>
+          <p>
+            By continuing to view this site, you acknowledge that it
+            is a learning exercise only and not a commercial
+            service.
+          </p>
+        </div>
+        <div class='flex flex-col gap-3'>
+          <h2 class='capitalize font-serif font-semibold text-2xl'>
+            educational purposes only
+          </h2>
+          <p>
+            The XP Potion website exists solely as a student project
+            and does not represent a real business.
+          </p>
+          <ul class='list-disc list-inside'>
+            <li>
+              Any descriptions of products, flavours, campaigns, or
+              promotions are fictional examples.
+            </li>
+            <li>
+              No items are available for purchase, and no real
+              transactions take place.
+            </li>
+            <li>
+              All creative elements were developed for educational
+              demonstration.
+            </li>
+          </ul>
+        </div>
+        <div class='flex flex-col gap-3'>
+          <h2 class='capitalize font-serif font-semibold text-2xl'>
+            use <span class='lowercase'>of the</span> website
+          </h2>
+          <ul class='list-disc list-inside'>
+            <li>
+              You may browse this site for educational or
+              illustrative purposes only.
+            </li>
+            <li>
+              No part of this project may be used for commercial
+              purposes.
+            </li>
+            <li>
+              All content (text, graphics, images, and logos) was
+              created or adapted for demonstration within the scope
+              of the school project.
+            </li>
+          </ul>
+        </div>
+        <div class='flex flex-col gap-3'>
+          <h2 class='capitalize font-serif font-semibold text-2xl'>
+            no products <span class='lowercase'>or</span> services offered
+          </h2>
+          <p>
+            XP Potion does not sell energy drinks, supplements, or
+            any other products. Any references to flavors,
+            ingredients, or campaigns (such as “Original Boost,”
+            “Zero Sugar Boost,” or “Mystery Boost”) are
+            fictionalized examples created to illustrate branding
+            and marketing concepts.
+          </p>
+        </div>
+        <div class='flex flex-col gap-3'>
+          <h2 class='capitalize font-serif font-semibold text-2xl'>
+            no liability
+          </h2>
+          <p>
+            Since XP Potion is not a real company, no liability,
+            warranty, or responsibility is accepted for the use of
+            the information presented. This website should not be
+            relied upon for actual product development, nutrition,
+            or marketing decisions.
+          </p>
+        </div>
+        <div class='flex flex-col gap-3'>
+          <h2 class='capitalize font-serif font-semibold text-2xl'>
+            governing context
+          </h2>
+          <p>
+            This project was created for educational purposes at <a
+              href='https://www.noroff.no/'
+              target='_blank'
+              class='text-accent-neon-pink hover:text-accent-magenta-purple'
+              >Noroff School of Technology and Digital Media</a
+            >. These Terms are intended only to clarify the
+            fictional and non-commercial nature of this project.
+          </p>
+        </div>
+        <div class='flex flex-col gap-3'>
+          <h2 class='capitalize font-serif font-semibold text-2xl'>
+            contact
+          </h2>
+          <p>
+            Any contact details shown on this site (such as email,
+            phone, or address) are placeholders and should not be
+            used to attempt contact.
+          </p>
+        </div>
+      </section>
+    </div>
   </div>
 </BaseLayout>

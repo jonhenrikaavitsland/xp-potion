@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
@@ -8,33 +9,36 @@ const { frontmatter } = Astro.props;
   title={frontmatter.title}
   description={frontmatter.description}
 >
-  <div class='lg:container lg:mx-auto px-3 py-12'>
-    <div class='flex flex-col md:flex-row gap-6'>
-      <div class='grow'>
-        <img
-          src={frontmatter.image.url}
-          alt={frontmatter.image.alt}
-        />
-      </div>
-      <section class='flex flex-col gap-4 grow'>
-        <h1 class='font-bold text-2xl'>{frontmatter.heading}</h1>
-        <p>{frontmatter.excerpt}</p>
-        <div class='bg-neutral-800 p-5 rounded-xl italic'>
-          <p class='text-sm text-white/60'>
-            <span class='font-semibold capitalize'
-              >ingredients:
-            </span>{frontmatter.ingredients}
-          </p>
+  <div class='lg:container lg:mx-auto px-5 pt-2 pb-12'>
+    <Breadcrumbs />
+    <div class='pt-10'>
+      <div class='flex flex-col md:flex-row gap-6'>
+        <div class='grow'>
+          <img
+            src={frontmatter.image.url}
+            alt={frontmatter.image.alt}
+          />
         </div>
-        <p>{frontmatter.servingSize}</p>
-        <p>Category: {frontmatter.category}</p>
+        <section class='flex flex-col gap-4 grow'>
+          <h1 class='font-bold text-2xl'>{frontmatter.heading}</h1>
+          <p>{frontmatter.excerpt}</p>
+          <div class='bg-neutral-800 p-5 rounded-xl italic'>
+            <p class='text-sm text-white/60'>
+              <span class='font-semibold capitalize'
+                >ingredients:
+              </span>{frontmatter.ingredients}
+            </p>
+          </div>
+          <p>{frontmatter.servingSize}</p>
+          <p>Category: {frontmatter.category}</p>
 
-        <article
-          class='prose prose-lg mx-auto max-w-none mt-6 border-t pt-6 border-accent-magenta-purple/60 prose-invert'
-        >
-          <slot />
-        </article>
-      </section>
+          <article
+            class='prose prose-lg mx-auto max-w-none mt-6 border-t pt-6 border-accent-magenta-purple/60 prose-invert'
+          >
+            <slot />
+          </article>
+        </section>
+      </div>
     </div>
   </div>
 </BaseLayout>

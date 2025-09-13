@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
@@ -8,19 +9,22 @@ const { frontmatter } = Astro.props;
   title={frontmatter.title}
   description={frontmatter.description}
 >
-  <div class='lg:container lg:mx-auto px-3 py-12'>
-    <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-    <p class='italic'>{frontmatter.description}</p>
-    <p>Written by {frontmatter.author}</p>
-    <img
-      src={frontmatter.image.url}
-      width='300'
-      alt={frontmatter.image.alt}
-    />
-    <article
-      class='prose prose-lg mx-auto mt-6 pt-2 border-t prose-invert'
-    >
-      <slot />
-    </article>
+  <div class='lg:container lg:mx-auto px-5 pt-2 pb-12'>
+    <Breadcrumbs />
+    <div class='pt-10'>
+      <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+      <p class='italic'>{frontmatter.description}</p>
+      <p>Written by {frontmatter.author}</p>
+      <img
+        src={frontmatter.image.url}
+        width='300'
+        alt={frontmatter.image.alt}
+      />
+      <article
+        class='prose prose-lg mx-auto mt-6 pt-2 border-t prose-invert'
+      >
+        <slot />
+      </article>
+    </div>
   </div>
 </BaseLayout>

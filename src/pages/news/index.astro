@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import NewsCard from '../../components/NewsCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
@@ -19,25 +20,28 @@ const description =
 ---
 
 <BaseLayout title='News' description={description}>
-  <div class='lg:container lg:mx-auto py-12 px-5'>
-    <section class='flex flex-col gap-12'>
-      <div class='border-b pb-4'>
-        <h1 class='font-serif font-bold text-4xl'>News</h1>
-      </div>
-      <ul
-        class='flex flex-col gap-6 md:max-w-min md:whitespace-nowrap'
-      >
-        {
-          allNews.map((news: any, i) => (
-            <NewsCard
-              url={news.url}
-              heading={news.frontmatter.heading}
-              date={news.frontmatter.date}
-              index={i}
-            />
-          ))
-        }
-      </ul>
-    </section>
+  <div class='lg:container lg:mx-auto pt-2 pb-12 px-5'>
+    <Breadcrumbs />
+    <div class='pt-10'>
+      <section class='flex flex-col gap-12'>
+        <div class='border-b pb-4'>
+          <h1 class='font-serif font-bold text-4xl'>News</h1>
+        </div>
+        <ul
+          class='flex flex-col gap-6 md:max-w-min md:whitespace-nowrap'
+        >
+          {
+            allNews.map((news: any, i) => (
+              <NewsCard
+                url={news.url}
+                heading={news.frontmatter.heading}
+                date={news.frontmatter.date}
+                index={i}
+              />
+            ))
+          }
+        </ul>
+      </section>
+    </div>
   </div>
 </BaseLayout>
