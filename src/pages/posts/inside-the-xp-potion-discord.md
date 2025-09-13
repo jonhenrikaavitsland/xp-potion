@@ -6,8 +6,8 @@ pubDate: 2025-09-12
 description: 'Discover how the XP Potion Discord unites gamers worldwide with events, challenges, and a thriving gaming community. Join the fun today!'
 author: 'Team XP Potion'
 image:
-    url:
-    alt:
+    url: /assets/images/xp-potion-discord-community-gaming-channels.jpg
+    alt: XP Potion Discord server interface showing gaming text and voice channels for community engagement
 ---
 
 # Inside the XP Potion Discord: How Gamers Build Community
@@ -17,6 +17,11 @@ Gaming has always been more than just pressing buttons — it’s about connecti
 From the earliest LAN parties to today’s global esports tournaments, gamers thrive when they share victories, defeats, and stories with others who get it. 
 
 That’s exactly why the XP Potion Discord exists: to give gamers a place to belong, compete, and recharge together.
+
+<figure>
+  <img src="/assets/images/xp-potion-gaming-community-celebration.jpg" alt="Group of friends celebrating a gaming victory together with excitement and high-fives, representing the XP Potion community spirit" />
+  <figcaption class="italic text-md">XP Potion fuels more than just focus — it powers shared wins, laughter, and community moments that level up the gaming experience.</figcaption>
+</figure>
 
 ## Why Discord Is the Heart of Gaming Communities
 
@@ -39,6 +44,11 @@ Here’s a peek behind the curtain:
 - **Insider Announcements** – Be the first to hear about new product drops, limited editions, and campaigns like the Mystery Boost.
 
 - **Supportive Vibes Only** – Whether you’re grinding ranked or just need advice on keeping your energy levels up, the community got your back.
+
+<figure>
+  <img src="/assets/images/xp-potion-community-gaming-night-energy-drink.jpg" alt="Group of gamers enjoying XP Potion energy drinks at a gaming night with glowing potion bottle centerpiece" />
+  <figcaption class="italic text-md">XP Potion brings gamers together — from community nights to co-op sessions, the real-world potion fuels energy, focus, and fun.</figcaption>
+</figure>
 
 ## Why Community Matters for Gamers
 
