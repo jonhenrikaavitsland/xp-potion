@@ -1,8 +1,33 @@
 ---
 import Hero from '../components/Hero.astro';
+import Intro from '../components/Intro.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title='Home'>
   <Hero />
+  <div class='flex flex-col gap-16 pb-16'>
+    <Intro
+      heading='Discover the Potions. Boost Your Game'
+      paragraph='From all-night raids to study sessions and esports arenas, XP Potion is your real-world power-up. Explore our collection of energy, focus, and hydration boosts designed for gamers who want to level up — in-game and in life.'
+      image={{
+        src: '/assets/images/xp-potion-energy-drink-original-zero-sugar-mystery-boost-cans.jpg',
+        alt: 'Three XP Potion energy drink cans — Original Boost, Zero Sugar Boost, and Mystery Boost — displayed with vibrant neon lighting in orange, green, and purple',
+      }}
+      linkHref='/products'
+      linkLabel='Explore All Products'
+      inverted={false}
+    />
+    <Intro
+      heading='Inside the XP Potion Discord: Gaming Beyond the Game'
+      paragraph='Discover how the XP Potion Discord is bringing gamers together worldwide. From daily hangouts and community challenges to exclusive announcements and supportive vibes, our Discord is more than a server — it’s a home base for players who thrive on connection, laughter, and shared victories.'
+      image={{
+        src: '/assets/images/xp-potion-discord-community-gaming-channels.jpg',
+        alt: 'XP Potion Discord server interface showing gaming text and voice channels for community engagement',
+      }}
+      linkHref='/posts/inside-the-xp-potion-discord'
+      linkLabel='Read the Full Story'
+      inverted={true}
+    />
+  </div>
 </BaseLayout>

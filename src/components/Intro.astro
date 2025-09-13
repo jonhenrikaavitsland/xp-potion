@@ -1,0 +1,58 @@
+---
+interface Props {
+  heading: string;
+  paragraph: string;
+  image: { src: string; alt: string };
+  linkHref: string;
+  linkLabel?: string;
+  inverted: boolean;
+}
+
+const {
+  heading,
+  paragraph,
+  image,
+  linkHref,
+  linkLabel,
+  inverted = 'Browse Collection',
+} = Astro.props;
+---
+
+<div class={`${inverted ? '' : 'bg-accent-deep-violet'}`}>
+  <section
+    class='lg:container lg:mx-auto px-5 py-16 flex flex-col-reverse items-center gap-8 xl:flex-row xl:justify-between'
+  >
+    <div
+      class={`max-w-xl text-center xl:text-left xl:flex-grow-1 ${inverted ? 'order-2' : ''}`}
+    >
+      <h2
+        class='font-serif text-4xl font-extrabold text-white sm:text-5xl'
+      >
+        {heading}
+      </h2>
+      <p class='mt-4 text-lg text-neutral-300'>
+        {paragraph}
+      </p>
+      <div
+        class={`flex justify-center ${inverted ? 'xl:justify-start' : 'xl:justify-end'}`}
+      >
+        <a
+          href={linkHref}
+          class='mt-6 inline-block rounded-lg bg-accent-magenta-purple px-6 py-3 font-semibold text-white shadow hover:bg-accent-neon-pink transition-colors'
+        >
+          {linkLabel}
+        </a>
+      </div>
+    </div>
+
+    <div class='max-w-xl xl:max-w-2xl'>
+      <img
+        src={image.src}
+        alt={image.alt}
+        class='w-full rounded-xl shadow-lg object-cover aspect-video'
+        loading='lazy'
+        decoding='async'
+      />
+    </div>
+  </section>
+</div>
