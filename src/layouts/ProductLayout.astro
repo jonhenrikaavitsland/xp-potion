@@ -28,12 +28,13 @@ const { frontmatter } = Astro.props;
         </div>
         <p>{frontmatter.servingSize}</p>
         <p>Category: {frontmatter.category}</p>
+
+        <article
+          class='prose prose-lg mx-auto max-w-none mt-6 border-t pt-6 border-accent-magenta-purple/60 prose-invert'
+        >
+          <slot />
+        </article>
       </section>
     </div>
-    <article
-      class='prose prose-lg mx-auto max-w-none mt-6 pt-2 border-t prose-invert'
-    >
-      <slot />
-    </article>
   </div>
 </BaseLayout>
