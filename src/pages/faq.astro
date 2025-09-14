@@ -45,21 +45,11 @@ const faqs = [
   },
 ];
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map(({ q, a }) => ({
-    '@type': 'Question',
-    name: q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: a,
-    },
-  })),
-};
+const description =
+  'Find answers to common questions about XP Potion energy drinks — ingredients, benefits, safety, shipping, and more in our FAQ section.';
 ---
 
-<BaseLayout>
+<BaseLayout title='FAQ' description={description}>
   <div class='lg:container lg:mx-auto pt-2 pb-24 px-5'>
     <Breadcrumbs labelMap={{ faq: 'FAQ' }} />
     <div class='pt-10'>
