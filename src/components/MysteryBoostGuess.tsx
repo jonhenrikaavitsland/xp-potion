@@ -124,10 +124,10 @@ export default function MysteryBoostGuess({
   }
 
   return (
-    <section className="mx-auto w-full max-w-xl rounded-2xl border bg-neutral-900/40 p-5 backdrop-blur-md shadow">
-      <header className="mb-4">
+    <section className="flex flex-col gap-4 mx-auto w-full max-w-xl rounded-2xl bg-neutral-800 p-5 backdrop-blur-md shadow">
+      <header className="flex flex-col gap-2">
         <h2 className="text-2xl font-bold font-serif">{title}</h2>
-        <p className="mt-1 text-sm text-neutral-300">{subtitle}</p>
+        <p className="text-neutral-300">{subtitle}</p>
       </header>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -139,7 +139,7 @@ export default function MysteryBoostGuess({
             placeholder="Type your guess… (e.g. Dragonfruit Kiwi)"
             value={flavor}
             onChange={(e) => setFlavor(e.target.value)}
-            className="mt-1 w-full rounded-xl border bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-accent-neon-pink"
+            className="mt-1 w-full rounded-xl bg-neutral-700 px-3 py-2 outline-none focus:ring-2 focus:ring-accent-neon-pink"
           />
         </div>
 
@@ -151,7 +151,7 @@ export default function MysteryBoostGuess({
             placeholder="Enter your gamer tag"
             value={nickname}
             onChange={(e) => setNickname(e.target.value)}
-            className="mt-1 w-full rounded-xl border bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-accent-neon-pink"
+            className="mt-1 w-full rounded-xl bg-neutral-700 px-3 py-2 outline-none focus:ring-2 focus:ring-accent-neon-pink"
           />
         </div>
 
@@ -163,18 +163,38 @@ export default function MysteryBoostGuess({
             placeholder="you@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 w-full rounded-xl border bg-neutral-900 px-3 py-2 outline-none focus:ring-2 focus:ring-accent-neon-pink"
+            className="mt-1 w-full rounded-xl bg-neutral-700 px-3 py-2 outline-none focus:ring-2 focus:ring-accent-neon-pink"
             required
           />
         </div>
 
-        <label className="flex items-start gap-3 text-sm">
+        {/* <label className="flex items-start gap-3 text-sm">
           <input
             type="checkbox"
             checked={consent}
             onChange={(e) => setConsent(e.target.checked)}
-            className="mt-1 size-4 rounded border"
+            className="mt-1 size-4 rounded appearance-none checked:border bg-neutral-700 checked:border-accent-neon-pink"
           />
+          <span>I agree to receive updates, hints, and promotions from XP Potion.</span>
+        </label> */}
+
+        <label className="flex items-start gap-3 text-sm cursor-pointer">
+          <input
+            type="checkbox"
+            checked={consent}
+            onChange={(e) => setConsent(e.target.checked)}
+            className="peer mt-1 size-4 rounded appearance-none border border-neutral-600 bg-neutral-700 checked:bg-accent-neon-pink checked:border-accent-neon-pink flex items-center justify-center"
+          />
+          {/* Custom checkmark */}
+          <svg
+            className="pointer-events-none absolute hidden size-4 text-white peer-checked:block mt-1"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 13l4 4L19 7" />
+          </svg>
           <span>I agree to receive updates, hints, and promotions from XP Potion.</span>
         </label>
 
@@ -202,15 +222,15 @@ export default function MysteryBoostGuess({
       </form>
 
       {feedback && (
-        <div className="mt-4 rounded-xl border bg-neutral-800/60 p-4">
+        <div className="mt-4 rounded-xl bg-neutral-700 p-4">
           <p className="text-sm">
-            <span className="mr-2 inline-block rounded-full border px-2 py-0.5 text-xs">Clue</span>
+            <span className="mr-2 inline-block rounded-lg bg-neutral-900 px-4 py-2 text-xs">Clue</span>
             {feedback}
           </p>
           <div className="mt-3 flex flex-wrap gap-2 text-sm">
-            <a href="#" className="rounded-full border px-3 py-1 hover:underline">Join the hunt</a>
-            <a href="#" className="rounded-full border px-3 py-1 hover:underline">Submit another guess</a>
-            <a href="#" className="rounded-full border px-3 py-1 hover:underline">#GuessTheBoost</a>
+            <a href="#" className="rounded-lg bg-neutral-900 px-4 py-2 hover:text-accent-neon-pink">Join the hunt</a>
+            <a href="#" className="rounded-lg bg-neutral-900 px-4 py-2 hover:text-accent-neon-pink">Submit another guess</a>
+            <a href="#" className="rounded-lg bg-neutral-900 px-4 py-2 hover:text-accent-neon-pink">#GuessTheBoost</a>
           </div>
         </div>
       )}
