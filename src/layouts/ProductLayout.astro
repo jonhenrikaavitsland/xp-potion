@@ -1,5 +1,6 @@
 ---
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SocialShareX from '../components/SocialShareX.astro';
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
@@ -31,6 +32,12 @@ const { frontmatter } = Astro.props;
           </div>
           <p>{frontmatter.servingSize}</p>
           <p>Category: {frontmatter.category}</p>
+          <div>
+            <SocialShareX
+              url={`https://xp-potion.netlify.app${frontmatter.url}`}
+              text={frontmatter.heading}
+            />
+          </div>
 
           <article
             class='prose prose-lg mx-auto max-w-none mt-6 border-t pt-6 border-accent-magenta-purple/60 prose-invert'
