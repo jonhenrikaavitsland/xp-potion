@@ -1,9 +1,12 @@
 ---
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const description =
+  'Read XP Potion’s Privacy Policy to learn how we collect, use, and protect your data. Transparent, secure, and compliant with GDPR standards.';
 ---
 
-<BaseLayout>
+<BaseLayout title='Privacy Policy' description={description}>
   <div class='lg:container lg:mx-auto pt-2 pb-12 px-5'>
     <Breadcrumbs />
 
