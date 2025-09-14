@@ -1,0 +1,23 @@
+---
+interface Props {
+  url: string; // the page URL you want to share
+  text?: string; // optional tweet text
+}
+
+const { url, text = 'Check this out!' } = Astro.props;
+---
+
+<a
+  href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`}
+  target='_blank'
+  rel='noopener noreferrer'
+  class='inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2 text-white hover:bg-gray-800 transition-colors'
+>
+  Share on
+  <!-- X (Twitter) logo -->
+  <img
+    src='/assets/icons/x-twitter-brand.svg'
+    alt='share on social media'
+    class='h-5 w-5 icon-white'
+  />
+</a>
