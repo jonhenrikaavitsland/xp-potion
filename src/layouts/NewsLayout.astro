@@ -19,7 +19,7 @@ const formattedDate = new Date(frontmatter.date).toLocaleDateString(
   title={frontmatter.title}
   description={frontmatter.description}
 >
-  <div class='lg:container lg:mx-auto md:px-5 pt-2 pb-12'>
+  <div class='lg:container lg:mx-auto px-5 pt-2 pb-12'>
     <Breadcrumbs
       labelMap={{
         'xp-potion-x-rascals': 'XP Potion x Rascals',
@@ -27,7 +27,7 @@ const formattedDate = new Date(frontmatter.date).toLocaleDateString(
       }}
     />
     <div class='pt-10'>
-      <div class='flex flex-col max-w-2xl px-5 mx-auto gap-6'>
+      <div class='flex flex-col max-w-2xl md:px-5 mx-auto gap-6'>
         <div class='grow'>
           <img
             src={frontmatter.image.url}
