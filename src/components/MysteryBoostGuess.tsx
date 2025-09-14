@@ -202,7 +202,7 @@ export default function MysteryBoostGuess({
           <p role="alert" className="rounded-lg border border-red-500 bg-red-500/10 px-3 py-2 text-sm text-red-300">{error}</p>
         )}
 
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
           <button
             type="submit"
             disabled={disabled}
@@ -214,7 +214,6 @@ export default function MysteryBoostGuess({
           >
             {secondsLeft > 0 ? `Try again in ${secondsLeft}s` : busy ? "Submitting…" : "Submit your guess"}
           </button>
-
           <div className="text-xs text-neutral-400">
             By submitting, you join the Mystery Boost quest. Sip · Guess · Win.
           </div>
