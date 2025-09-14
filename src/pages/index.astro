@@ -2,9 +2,12 @@
 import Hero from '../components/Hero.astro';
 import Intro from '../components/Intro.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const description =
+  'XP Potion — the immersive energy drink for gamers. Boost focus, stamina, and endurance with potion-inspired flavors. Level up your game and life today.';
 ---
 
-<BaseLayout title='Home'>
+<BaseLayout title='Home' description={description}>
   <Hero />
   <div class='flex flex-col gap-16 pb-16'>
     <Intro
