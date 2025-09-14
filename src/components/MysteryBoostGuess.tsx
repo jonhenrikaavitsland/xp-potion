@@ -207,7 +207,7 @@ export default function MysteryBoostGuess({
             type="submit"
             disabled={disabled}
             className={classNames(
-              "rounded-xl px-5 py-2 font-semibold text-white shadow",
+              "rounded-xl px-5 whitespace-nowrap py-2 font-semibold text-white shadow",
               disabled ? "bg-neutral-600 cursor-not-allowed" : "bg-accent-magenta-purple hover:bg-accent-neon-pink transition-colors"
             )}
             aria-disabled={disabled}

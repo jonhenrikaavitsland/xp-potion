@@ -13,7 +13,7 @@ const description =
 >
   <div class='lg:container lg:mx-auto pt-2 pb-12 px-5'>
     <Breadcrumbs />
-    <div class='pt-10'>
+    <div class='pt-10 flex flex-col gap-12'>
       <section
         class='flex flex-col gap-8 text-center md:text-start'
       >
@@ -28,6 +28,20 @@ const description =
             class='w-full max-w-xl mx-auto'
           />
         </div>
+        <section class='max-w-2xl mx-auto flex flex-col gap-4'>
+          <h2 class='font-serif font-bold text-3xl'>
+            XP Potion – “Guess the Flavor” Challenge
+          </h2>
+          <p>
+            Think you can crack the code? XP Potion has unleashed
+            Mystery Boost, a limited-edition flavor designed to keep
+            gamers guessing with every sip. Join the quest, submit
+            your guess, and team up with the community to unlock
+            prizes, rewards, and the ultimate flavor reveal. Because
+            in the world of XP Potion, every sip is XP — and this
+            one comes with a challenge.
+          </p>
+        </section>
         <MysteryBoostGuess client:load />
       </section>
     </div>
