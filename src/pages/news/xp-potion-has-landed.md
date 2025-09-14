@@ -8,7 +8,7 @@ image:
   url: /assets/images/xp-potion-original-boost-gamer-energy-drink-esports-arena.jpg
   alt: XP Potion Original Boost energy drink can displayed on a gaming desk with an esports arena crowd glowing in the background
 author: Team XP Potion
-description: 
+description: XP Potion officially launches with a bold lineup of potion-inspired energy drinks designed to empower gamers, creators, and students — combining authentic gamer culture, high performance, and clean energy for every grind.
 
 ---
 

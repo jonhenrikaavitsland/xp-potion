@@ -8,7 +8,7 @@ image:
   url: /assets/images/xp-potion-rascals-esports-team-energy-drink.jpg
   alt: XP Potion teams up with Rascals Esports — powering their players with clean energy, focus, and endurance for competitive gaming.
 author: Team XP Potion
-description: 
+description: XP Potion teams up with esports team Rascals in a partnership built on performance, authenticity, and community-first gaming culture.
 
 ---
 

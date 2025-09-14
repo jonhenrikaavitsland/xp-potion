@@ -8,7 +8,7 @@ image:
   url: /assets/images/xp-potion-mystery-boost-limited-edition-gamer-energy-drink.png
   alt: XP Potion Mystery Boost limited-edition gamer energy drink can in neon purple design with glowing gaming icons
 author: Team XP Potion
-description: 
+description: Mystery Boost is a limited-edition flavor drop by XP Potion, packed with clean energy and wrapped in mystery. Grab your can, guess the flavor, and join the community quest to unlock what’s behind the taste.
 
 ---
 
