@@ -132,7 +132,7 @@ export default function MysteryBoostGuess({
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="flavor" className="block text-sm font-medium">Flavor Guess</label>
+          <label htmlFor="flavor" className="block text-sm font-medium text-start">Flavor Guess</label>
           <input
             id="flavor"
             type="text"
@@ -144,7 +144,7 @@ export default function MysteryBoostGuess({
         </div>
 
         <div>
-          <label htmlFor="nick" className="block text-sm font-medium">Nickname / Gamer Tag (optional)</label>
+          <label htmlFor="nick" className="block text-sm font-medium text-start">Nickname / Gamer Tag (optional)</label>
           <input
             id="nick"
             type="text"
@@ -156,7 +156,7 @@ export default function MysteryBoostGuess({
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium">Email</label>
+          <label htmlFor="email" className="block text-sm font-medium text-start">Email</label>
           <input
             id="email"
             type="email"
@@ -195,14 +195,14 @@ export default function MysteryBoostGuess({
           >
             <path d="M5 13l4 4L19 7" />
           </svg>
-          <span>I agree to receive updates, hints, and promotions from XP Potion.</span>
+          <span className="text-start">I agree to receive updates, hints, and promotions from XP Potion.</span>
         </label>
 
         {error && (
           <p role="alert" className="rounded-lg border border-red-500 bg-red-500/10 px-3 py-2 text-sm text-red-300">{error}</p>
         )}
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col md:flex-row items-center gap-3">
           <button
             type="submit"
             disabled={disabled}
