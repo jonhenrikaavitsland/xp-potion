@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/images/xp-potion-logo.png';
+import BannerTop from '../components/BannerTop';
 
 const navLinks = [
   { link: '/', label: 'home' },
@@ -15,6 +16,16 @@ const navLinks = [
   class='flex flex-col sticky top-0 z-50 bg-accent-magenta-purple shadow-md transition-all duration-300 will-change-transform'
   id='site-header'
 >
+  <BannerTop
+    client:load
+    id='mystery-boost-announce'
+    text='Mystery Boost is live — guess the flavor & win!'
+    href='/products/mystery-boost'
+    bgClass='bg-neutral-charcoal-black text-white'
+    heightClass=''
+    position='absolute'
+    pushDown={true}
+  />
   <div
     class='flex justify-between flex-wrap md:flex-nowrap md:justify-normal px-5 lg:container lg:mx-auto'
   >
