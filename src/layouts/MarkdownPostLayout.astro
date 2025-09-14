@@ -13,7 +13,7 @@ const { frontmatter } = Astro.props;
   <div class='lg:container lg:mx-auto px-5 pt-2 pb-12'>
     <Breadcrumbs />
     <div class='pt-10'>
-      <div class='flex flex-col gap-4 max-w-2xl mx-auto px-5'>
+      <div class='flex flex-col gap-4 max-w-2xl mx-auto'>
         <div class='order-2 flex flex-col gap-2'>
           <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
           <p class='italic'>{frontmatter.description}</p>
@@ -31,12 +31,12 @@ const { frontmatter } = Astro.props;
         />
       </div>
       <article
-        class='prose prose-lg mx-auto mt-6 pt-2 border-t prose-invert'
+        class='prose prose-lg mx-auto max-w-2xl mt-6 pt-2 border-t prose-invert'
       >
         <slot />
       </article>
       <div
-        class='flex gap-12 items-center max-w-2xl px-5 mx-auto pt-6 pb-12 border-t border-accent-magenta-purple/60 mt-12'
+        class='flex gap-12 items-center max-w-2xl mx-auto pt-6 pb-12 border-t border-accent-magenta-purple/60 mt-12'
       >
         <SocialShareX
           url={`https://xp-potion.netlify.app${frontmatter.url}`}
