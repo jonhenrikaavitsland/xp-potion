@@ -7,6 +7,7 @@ excerpt: Not all potions reveal their secrets. Enter XP Potion – Mystery Boost
 image:
   url: /assets/images/xp-potion-mystery-boost-limited-edition-gamer-energy-drink.png
   alt: XP Potion Mystery Boost limited-edition gamer energy drink can in neon purple design with glowing gaming icons
+author: Team XP Potion
 description: 
 
 ---

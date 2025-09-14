@@ -7,6 +7,7 @@ excerpt: "We built XP Potion because the old-school energy drinks felt like NPCs
 image:
   url: /assets/images/xp-potion-original-boost-gamer-energy-drink-esports-arena.jpg
   alt: XP Potion Original Boost energy drink can displayed on a gaming desk with an esports arena crowd glowing in the background
+author: Team XP Potion
 description: 
 
 ---

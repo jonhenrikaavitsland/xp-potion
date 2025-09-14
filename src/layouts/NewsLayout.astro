@@ -4,6 +4,15 @@ import SocialShareX from '../components/SocialShareX.astro';
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
+
+const formattedDate = new Date(frontmatter.date).toLocaleDateString(
+  'en-US',
+  {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }
+);
 ---
 
 <BaseLayout
@@ -18,16 +27,24 @@ const { frontmatter } = Astro.props;
       }}
     />
     <div class='pt-10'>
-      <div class='flex flex-col md:flex-row gap-6'>
+      <div class='flex flex-col max-w-2xl px-5 mx-auto gap-6'>
         <div class='grow'>
           <img
             src={frontmatter.image.url}
             alt={frontmatter.image.alt}
           />
         </div>
-        <section class='flex flex-col gap-4 grow'>
-          <h1 class='font-bold text-2xl'>{frontmatter.heading}</h1>
-          <p>{frontmatter.description}</p>
+        <section class='flex flex-col gap-4'>
+          <time datetime={frontmatter.date} class='w-38'
+            >{formattedDate}</time
+          >
+          <p>Written by: {frontmatter.author}</p>
+          <div>
+            <SocialShareX
+              url={`https://xp-potion.netlify.app${frontmatter.url}`}
+              text={frontmatter.heading}
+            />
+          </div>
         </section>
       </div>
       <article
@@ -35,7 +52,9 @@ const { frontmatter } = Astro.props;
       >
         <slot />
       </article>
-      <div class='flex gap-12 items-center'>
+      <div
+        class='flex gap-12 items-center max-w-2xl px-5 mx-auto pt-6 pb-12 border-t border-accent-magenta-purple/60 mt-12'
+      >
         <SocialShareX
           url={`https://xp-potion.netlify.app${frontmatter.url}`}
           text={frontmatter.heading}
