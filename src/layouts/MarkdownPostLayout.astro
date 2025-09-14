@@ -13,24 +13,31 @@ const { frontmatter } = Astro.props;
   <div class='lg:container lg:mx-auto px-5 pt-2 pb-12'>
     <Breadcrumbs />
     <div class='pt-10'>
-      <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-      <p class='italic'>{frontmatter.description}</p>
-      <p>Written by {frontmatter.author}</p>
-      <SocialShareX
-        url={`https://xp-potion.netlify.app${frontmatter.url}`}
-        text={frontmatter.heading}
-      />
-      <img
-        src={frontmatter.image.url}
-        width='300'
-        alt={frontmatter.image.alt}
-      />
+      <div class='flex flex-col gap-4 max-w-2xl mx-auto px-5'>
+        <div class='order-2 flex flex-col gap-2'>
+          <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+          <p class='italic'>{frontmatter.description}</p>
+          <p>Written by: {frontmatter.author}</p>
+          <div>
+            <SocialShareX
+              url={`https://xp-potion.netlify.app${frontmatter.url}`}
+              text={frontmatter.heading}
+            />
+          </div>
+        </div>
+        <img
+          src={frontmatter.image.url}
+          alt={frontmatter.image.alt}
+        />
+      </div>
       <article
         class='prose prose-lg mx-auto mt-6 pt-2 border-t prose-invert'
       >
         <slot />
       </article>
-      <div class='flex gap-12 items-center'>
+      <div
+        class='flex gap-12 items-center max-w-2xl px-5 mx-auto pt-6 pb-12 border-t border-accent-magenta-purple/60 mt-12'
+      >
         <SocialShareX
           url={`https://xp-potion.netlify.app${frontmatter.url}`}
           text={frontmatter.heading}
