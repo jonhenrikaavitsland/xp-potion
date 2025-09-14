@@ -2,9 +2,15 @@
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import MysteryBoostGuess from '../components/MysteryBoostGuess';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const description =
+  'Join the XP Potion Mystery Boost challenge. Guess the secret flavor, unlock clues, and compete for prizes in this limited-edition gamer quest.';
 ---
 
-<BaseLayout>
+<BaseLayout
+  title='Guess the Mystery Boost'
+  description={description}
+>
   <div class='lg:container lg:mx-auto pt-2 pb-12 px-5'>
     <Breadcrumbs />
     <div class='pt-10'>
