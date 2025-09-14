@@ -1,0 +1,28 @@
+---
+interface Props {
+  image: string; // image URL (local / public / remote)
+  alt: string; // alt text for accessibility
+  href: string; // link target
+  text: string; // link text
+}
+
+const { image, alt, href, text } = Astro.props;
+---
+
+<a
+  href={href}
+  class='flex items-center gap-4 rounded-xl bg-accent-magenta-purple/10 hover:bg-accent-magenta-purple/20 p-4 transition-colors'
+>
+  <img
+    src={image}
+    alt={alt}
+    class='h-16 w-16 rounded-lg object-cover'
+    loading='lazy'
+    decoding='async'
+  />
+  <span
+    class='font-semibold text-lg text-white hover:underline hover:underline-offset-4'
+  >
+    {text}
+  </span>
+</a>
