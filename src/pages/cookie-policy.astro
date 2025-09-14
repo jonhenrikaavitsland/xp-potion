@@ -1,9 +1,12 @@
 ---
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const description =
+  'Read XP Potion’s Cookie Policy to understand how we use cookies to improve your browsing experience, personalize content, and ensure site functionality.';
 ---
 
-<BaseLayout>
+<BaseLayout title='Cookie Policy' description={description}>
   <div class='lg:container lg:mx-auto pt-2 pb-12 px-5'>
     <Breadcrumbs />
     <section class='pt-10'>
