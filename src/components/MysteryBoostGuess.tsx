@@ -202,7 +202,7 @@ export default function MysteryBoostGuess({
           <p role="alert" className="rounded-lg border border-red-500 bg-red-500/10 px-3 py-2 text-sm text-red-300">{error}</p>
         )}
 
-        <div className="flex flex-col md:flex-row items-center gap-3">
+        <div className="flex flex-col items-center md:items-start gap-3">
           <button
             type="submit"
             disabled={disabled}
