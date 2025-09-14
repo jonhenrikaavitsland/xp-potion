@@ -1,5 +1,6 @@
 ---
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SocialShareX from '../components/SocialShareX.astro';
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
@@ -15,6 +16,10 @@ const { frontmatter } = Astro.props;
       <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
       <p class='italic'>{frontmatter.description}</p>
       <p>Written by {frontmatter.author}</p>
+      <SocialShareX
+        url={`https://xp-potion.netlify.app${frontmatter.url}`}
+        text={frontmatter.heading}
+      />
       <img
         src={frontmatter.image.url}
         width='300'
@@ -25,6 +30,17 @@ const { frontmatter } = Astro.props;
       >
         <slot />
       </article>
+      <div class='flex gap-12 items-center'>
+        <SocialShareX
+          url={`https://xp-potion.netlify.app${frontmatter.url}`}
+          text={frontmatter.heading}
+        />
+        <a
+          href='#'
+          class='text-accent-neon-pink hover:text-accent-magenta-purple'
+          >Back to top</a
+        >
+      </div>
     </div>
   </div>
 </BaseLayout>
