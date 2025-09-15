@@ -1,9 +1,18 @@
 ---
 import BlogPost from '../components/BlogPost.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const allPosts = Object.values(
+
+let allPosts = Object.values(
   import.meta.glob('../pages/posts/*.md', { eager: true })
 );
+
+// Sort by date (newest first)
+allPosts = allPosts.sort((a: any, b: any) => {
+  return (
+    new Date(b.frontmatter.pubDate).getTime() -
+    new Date(a.frontmatter.pubDate).getTime()
+  );
+});
 
 const description =
   'Read the XP Potion blog — guides, tips, and stories for gamers and streamers. Discover performance insights, community updates, and product news.';
