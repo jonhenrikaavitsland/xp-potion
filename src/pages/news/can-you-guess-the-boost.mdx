@@ -12,6 +12,8 @@ description: Mystery Boost is a limited-edition flavor drop by XP Potion, packed
 
 ---
 
+import CtaImageLink from "../../components/CtaImageLink.astro"
+
 # Can You Guess the Boost? XP Potion Launches Mystery Flavour Challenge
 
 Not all potions reveal their secrets.
@@ -85,4 +87,18 @@ Post your guesses, share your reactions, and see if you have what it takes to un
 
 Because in the world of XP Potion, every sip is XP — and this one just might level you up.
 
-[Try Mystery Boost & Join the Guessing Challenge](/guess-the-mystery-boost)
+<div class="flex flex-col gap-8 mt-12">
+ <CtaImageLink 
+  image="/assets/images/xp-potion-guess-the-boost-competition.jpg" 
+  alt="Can you guess the Boost?" 
+  href="/guess-the-mystery-boost" 
+  text="Can you guess the Boost?" 
+  first={true}
+/>
+<CtaImageLink 
+  image="/assets/images/xp-potion-mystery-boost-gamer-energy-drink-neon-design.jpg" 
+  alt="XP Potion Mystery Boost gamer energy drink can with glowing neon purple and pink design, surrounded by gaming icons" 
+  href="/products/mystery-boost" 
+  text="Try Mystery Boost Today" 
+/>
+</div>

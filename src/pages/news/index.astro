@@ -4,7 +4,7 @@ import NewsCard from '../../components/NewsCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 let allNews = Object.values(
-  import.meta.glob('./*.md', { eager: true })
+  import.meta.glob('./*.mdx', { eager: true })
 );
 
 // Sort by date (newest first)
