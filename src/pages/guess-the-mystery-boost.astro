@@ -1,5 +1,6 @@
 ---
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CtaImageLink from '../components/CtaImageLink.astro';
 import MysteryBoostGuess from '../components/MysteryBoostGuess';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -21,7 +22,13 @@ const description =
           <h1 class='capitalize text-4xl font-bold font-serif'>
             can you guess the flavour?
           </h1>
-          <p>Grab a can, taste the unknown, and join the hunt.</p>
+          <p>
+            <a
+              href='/products/mystery-boost'
+              class='text-accent-neon-pink hover:text-accent-magenta-purple'
+              >Grab a can,</a
+            > taste the unknown, and join the hunt.
+          </p>
           <img
             src='/assets/images/xp-potion-mystery-boost-limited-edition-gamer-energy-drink.png'
             alt=''
@@ -395,6 +402,22 @@ const description =
                       class='text-accent-neon-pink hover:text-accent-magenta-purple'
                       >Back to Guess Form</a
                     >
+                    <div class='flex flex-col gap-8 mt-12'>
+                      <CtaImageLink
+                        image='/assets/images/xp-potion-mystery-boost-news-update-cta.jpg'
+                        alt='Neon pink Mystery Boost News Update graphic with glowing question marks'
+                        href='/news/can-you-guess-the-boost'
+                        text='Read the Mystery Boost News Update'
+                        first={true}
+                      />
+                      <CtaImageLink
+                        image='/assets/images/xp-potion-mystery-boost-gamer-energy-drink-neon-design.jpg'
+                        alt='XP Potion Mystery Boost gamer energy drink can with glowing neon purple and pink design, surrounded by gaming icons'
+                        href='/products/mystery-boost'
+                        text='Try Mystery Boost Today'
+                        first={false}
+                      />
+                    </div>
                   </div>
                 </li>
               </div>
