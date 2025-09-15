@@ -28,7 +28,10 @@ const description =
             class='w-full max-w-xl mx-auto'
           />
         </div>
-        <section class='max-w-2xl mx-auto flex flex-col gap-4'>
+        <section
+          class='max-w-2xl mx-auto flex flex-col gap-4 pt-4'
+          id='guess-the-boost'
+        >
           <h2 class='font-serif font-bold text-3xl'>
             XP Potion – “Guess the Flavor” Challenge
           </h2>
@@ -43,6 +46,361 @@ const description =
           </p>
         </section>
         <MysteryBoostGuess client:load />
+        <section class='max-w-2xl mx-auto flex flex-col gap-4'>
+          <div>
+            <h2 class='font-serif font-bold text-3xl'>
+              Terms & Conditions
+            </h2>
+            <p class='italic'>Last updated: September 14, 2025</p>
+          </div>
+          <div class='flex flex-col gap-1'>
+            <p>
+              Welcome to the XP Potion “Guess the Flavor” Challenge
+              (the Challenge).
+            </p>
+            <p>
+              By participating, you agree to the following Terms &
+              Conditions:
+            </p>
+          </div>
+          <ol class='list-decimal flex flex-col gap-4'>
+            <li>
+              <div class='flex flex-col gap-2'>
+                <h3
+                  class='capitalize font-serif font-semibold text-xl'
+                >
+                  eligibility
+                </h3>
+                <ul
+                  class='list-disc list-inside flex flex-col gap-1'
+                >
+                  <li>
+                    The Challenge is open to individuals who are 18+
+                    at the time of entry.
+                  </li>
+                  <li>
+                    Participation is free. No purchase is necessary,
+                    though tasting Mystery Boost may improve your
+                    chances of guessing correctly.
+                  </li>
+                  <li>
+                    Employees, collaborators, or anyone directly
+                    involved in creating the Challenge are not
+                    eligible to win prizes.
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class='flex flex-col gap-2'>
+                <h3
+                  class='capitalize font-serif font-semibold text-xl'
+                >
+                  How <span class='lowercase'>to</span> Enter
+                </h3>
+                <ul
+                  class='list-disc list-inside flex flex-col gap-1'
+                >
+                  <li>
+                    To join, participants must submit their flavor
+                    guess through the <a
+                      href='#'
+                      class='text-accent-neon-pink hover:text-accent-magenta-purple'
+                      >official XP Potion website form</a
+                    >
+                  </li>
+                  <li>
+                    Each participant may submit as many guesses as
+                    they would like.
+                  </li>
+                  <li>
+                    Submissions must include a valid email address
+                    to be eligible for prizes.
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class='flex flex-col gap-2'>
+                <h3
+                  class='capitalize font-serif font-semibold text-xl'
+                >
+                  the challenge
+                </h3>
+                <ul
+                  class='list-disc list-inside flex flex-col gap-1'
+                >
+                  <li>
+                    The goal is to correctly guess the hidden flavor
+                    of XP Potion’s Mystery Boost.
+                  </li>
+                  <li>
+                    Weekly hints may be released on the website or
+                    XP Potion’s social media channels.
+                  </li>
+                  <li>
+                    Guesses will be collected until the official
+                    flavor reveal date: October 14, 2025
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class='flex flex-col gap-2'>
+                <h3
+                  class='capitalize font-serif font-semibold text-xl'
+                >
+                  prizes & rewards
+                </h3>
+                <ul
+                  class='list-disc list-inside flex flex-col gap-1'
+                >
+                  <li>
+                    Winners will be selected from participants who
+                    submitted the correct flavor guess before the
+                    reveal date.
+                  </li>
+                  <li>
+                    Prizes may include (but are not limited to): XP
+                    Potion merchandise, product bundles, and
+                    exclusive digital rewards.
+                  </li>
+                  <li>
+                    Prizes are non-transferable and cannot be
+                    exchanged for cash.
+                  </li>
+                  <li>
+                    XP Potion reserves the right to substitute
+                    prizes with alternatives of equal or greater
+                    value.
+                  </li>
+                </ul>
+                <section
+                  class='p-5 bg-neutral-800 rounded-xl flex flex-col gap-8 mb-4'
+                >
+                  <h4 class='font-bold font-serif text-xl'>
+                    🏆 Prize Tiers for the Mystery Boost Challenge
+                  </h4>
+                  <ul class='flex flex-col gap-4'>
+                    <li
+                      class='border-b border-accent-magenta-purple/60 pb-4'
+                    >
+                      <div class='flex flex-col gap-2'>
+                        <h5
+                          class='capitalize font-serif font-semibold text-lg pb-2'
+                        >
+                          🏅 1st Prize — Legendary Loot Crate
+                        </h5>
+                        <ul class='list-disc list-inside'>
+                          <li>
+                            1x <span class='font-bold'
+                              >Exclusive XP Potion</span
+                            > Hoodie (limited edition, neon purple &
+                            pink “Mystery Boost” design)
+                          </li>
+                          <li>
+                            1x <span class='font-bold'
+                              >1-month supply of XP Potion</span
+                            > (case of 24 cans, mix of all flavors)
+                          </li>
+                          <li>
+                            1x <span class='font-bold'
+                              >Founder’s Badge</span
+                            > (digital collectible / Discord role / special
+                            shout-out on social channels)
+                          </li>
+                          <li>
+                            <span class='font-bold'
+                              >Right to vote</span
+                            > on the next official XP Potion flavor release
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li
+                      class='border-b border-accent-magenta-purple/60 pb-4'
+                    >
+                      <div class='flex flex-col gap-2'>
+                        <h5
+                          class='capitalize font-serif font-semibold text-lg pb-2'
+                        >
+                          🥈 2nd Prize — Epic Loot Bundle
+                        </h5>
+                        <ul class='list-disc list-inside'>
+                          <li>
+                            1x <span class='font-bold'
+                              >XP Potion Merch Pack</span
+                            > (t-shirt + shaker or hat)
+                          </li>
+                          <li>
+                            1x <span class='font-bold'
+                              >12-pack of XP Potion</span
+                            > (including Mystery Boost)
+                          </li>
+                          <li>
+                            <span class='font-bold'
+                              >Discord XP Role</span
+                            > (special recognition inside the community)
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class='flex flex-col gap-2'>
+                        <h5
+                          class='capitalize font-serif font-semibold text-lg pb-2'
+                        >
+                          🥉 3rd Prize — Rare Boost Drop
+                        </h5>
+                        <ul class='list-disc list-inside'>
+                          <li>
+                            1x <span class='font-bold'
+                              >XP Potion Sampler Pack</span
+                            > (6 cans, including Mystery Boost)
+                          </li>
+                          <li>
+                            1x <span class='font-bold'
+                              >Exclusive Sticker Pack / Digital
+                              Wallpaper Set</span
+                            > (Mystery Boost art, neon designs)
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+                <li>
+                  <div class='flex flex-col gap-2'>
+                    <h3
+                      class='capitalize font-serif font-semibold text-xl'
+                    >
+                      winner selection & notification
+                    </h3>
+                    <ul
+                      class='list-disc list-inside flex flex-col gap-1'
+                    >
+                      <li>
+                        Winners will be announced during the
+                        official
+                        <span class='font-bold'
+                          >Mystery Boost Reveal Event</span
+                        > on October 14, 2025.
+                      </li>
+                      <li>
+                        Winners will also be contacted via the email
+                        provided upon entry.
+                      </li>
+                      <li>
+                        If a winner does not respond within 7 days,
+                        their prize may be forfeited and awarded to
+                        another participant.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class='flex flex-col gap-2'>
+                    <h3
+                      class='capitalize font-serif font-semibold text-xl'
+                    >
+                      data & privacy
+                    </h3>
+                    <ul
+                      class='list-disc list-inside flex flex-col gap-1'
+                    >
+                      <li>
+                        By entering, participants agree that XP
+                        Potion may collect and use their submitted
+                        data (flavor guess, gamer tag, email) for
+                        the purposes of administering the Challenge.
+                      </li>
+                      <li>
+                        Emails may also be used for XP Potion
+                        updates, promotions, and future campaigns.
+                        Participants may opt out at any time.
+                      </li>
+                      <li>
+                        For more information, visit our <a
+                          href='/privacy-policy'
+                          class='text-accent-neon-pink hover:text-accent-magenta-purple'
+                          >privacy policy</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class='flex flex-col gap-2'>
+                    <h3
+                      class='capitalize font-serif font-semibold text-xl'
+                    >
+                      fair play
+                    </h3>
+                    <ul
+                      class='list-disc list-inside flex flex-col gap-1'
+                    >
+                      <li>
+                        Any attempts to cheat, spam, or disrupt the
+                        Challenge will result in disqualification.
+                      </li>
+                      <li>
+                        XP Potion reserves the right to cancel or
+                        modify the Challenge if unforeseen
+                        circumstances arise (e.g., technical issues,
+                        suspicious activity).
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class='flex flex-col gap-2'>
+                    <h3
+                      class='capitalize font-serif font-semibold text-xl'
+                    >
+                      disclaimer
+                    </h3>
+                    <ul
+                      class='list-disc list-inside flex flex-col gap-1'
+                    >
+                      <li>
+                        XP Potion – Mystery Boost and this Challenge
+                        are part of a <span class='font-bold'
+                          >school project created for educational
+                          purposes only.</span
+                        > No commercial sales or binding legal obligations
+                        are involved.
+                      </li>
+                      <li>
+                        The Challenge is meant for fun, community
+                        engagement, and creative participation.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class='flex flex-col gap-2'>
+                    <h3
+                      class='capitalize font-serif font-semibold text-xl'
+                    >
+                      acceptance <span class='lowercase'>of</span>
+                      terms
+                    </h3>
+                    <p>
+                      By submitting a guess, you confirm that you
+                      have read, understood, and agree to these
+                      Terms & Conditions.
+                    </p>
+                    <a
+                      href='#guess-the-boost'
+                      class='text-accent-neon-pink hover:text-accent-magenta-purple'
+                      >Back to Guess Form</a
+                    >
+                  </div>
+                </li>
+              </div>
+            </li>
+          </ol>
+        </section>
       </section>
     </div>
   </div>
