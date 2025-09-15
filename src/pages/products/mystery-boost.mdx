@@ -14,8 +14,24 @@ id: 3
 
 ---
 
+import CtaImageLink from "../../components/CtaImageLink.astro"
+
 Not all potions reveal their secrets. XP Potion Mystery Boost is a limited-edition gamer energy drink with a flavor hidden in plain sight. Packed with 160 mg natural caffeine, L-theanine for smooth focus, and essential electrolytes, it delivers the same clean energy and hydration as our core lineup—only this time, the taste is a quest of its own.
 
 Crack open a can and experience a bold, vibrant flavor designed to keep you guessing. Is it tropical? Fruity? Something completely unexpected? Only the community can uncover the truth. Join the challenge, share your guess, and see if you can unlock the secret behind the real-life gaming potion that has everyone talking.
 
-**Can you guess the Boost?**
+<div class="flex flex-col gap-8 mt-12">
+ <CtaImageLink 
+  image="/assets/images/xp-potion-guess-the-boost-competition.jpg" 
+  alt="Can you guess the Boost?" 
+  href="/guess-the-mystery-boost" 
+  text="Can you guess the Boost?" 
+  first={true}
+/>
+<CtaImageLink 
+  image="/assets/images/xp-potion-mystery-boost-news-update-cta.jpg" 
+  alt="Neon pink Mystery Boost News Update graphic with glowing question marks" 
+  href="/news/can-you-guess-the-boost" 
+  text="Go to the Mystery Boost News Update" 
+/>
+</div>

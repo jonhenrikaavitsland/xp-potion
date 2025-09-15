@@ -4,25 +4,26 @@ interface Props {
   alt: string; // alt text for accessibility
   href: string; // link target
   text: string; // link text
+  first: boolean;
 }
 
-const { image, alt, href, text } = Astro.props;
+const { image, alt, href, text, first } = Astro.props;
 ---
 
-<a
-  href={href}
-  class='flex items-center gap-4 rounded-xl bg-accent-magenta-purple/10 hover:bg-accent-magenta-purple/20 p-4 transition-colors'
->
-  <img
-    src={image}
-    alt={alt}
-    class='h-16 w-16 rounded-lg object-cover'
-    loading='lazy'
-    decoding='async'
-  />
-  <span
-    class='font-semibold text-lg text-white hover:underline hover:underline-offset-4'
+<a href={href} class='not-prose'>
+  <div
+    class={`flex gap-4 rounded-lg bg-neutral-800 border-e-2 hover:text-accent-neon-pink ${first ? 'border-accent-magenta-purple' : 'border-accent-magenta-purple/60'} hover:border-accent-neon-pink items-center max-w-md`}
   >
-    {text}
-  </span>
+    <img
+      src={image}
+      alt={alt}
+      class='h-20 w-20 rounded-lg object-cover'
+      loading='lazy'
+      decoding='async'
+    />
+
+    <span class='font-semibold text-lg'>
+      {text}
+    </span>
+  </div>
 </a>
