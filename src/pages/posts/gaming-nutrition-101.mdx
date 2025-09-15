@@ -10,6 +10,8 @@ image:
     alt: 'Gamer drinking XP Potion at desk surrounded by healthy snacks and RGB setup'
 ---
 
+import CtaImageLink from "../../components/CtaImageLink.astro"
+
 # Gaming Nutrition 101: Fueling Your Grind the Right Way
 
 ## Gamers are athletes. Full stop.
@@ -170,3 +172,20 @@ Eat real food, hydrate often, sleep when you can, and keep potions (like XP Poti
 Because whether you’re chasing trophies, building content, or just grinding one more ranked match before bed, your body and mind are your best gear. 
 
 Treat them right, and they’ll carry you further than any weapon upgrade ever could.
+
+<div class="flex flex-col gap-8 mt-12">
+<CtaImageLink 
+  image="/assets/images/xp-potion-energy-drink-original-zero-sugar-mystery-boost-cans.jpg" 
+  alt="XP Potion energy drink cans: Original Boost, Zero Sugar Boost, and Mystery Boost with neon lighting" 
+  href="/products" 
+  text="Explore the XP Potion Product Range" 
+  first={true}
+/>
+ <CtaImageLink 
+  image="/assets/images/xp-potion-guess-the-boost-competition.jpg" 
+  alt="Can you guess the Boost?" 
+  href="/guess-the-mystery-boost" 
+  text="Can you guess the Boost?" 
+  first={false}
+/>
+</div>
