@@ -16,6 +16,7 @@ export default defineConfig({
   },
 
   integrations: [react(), mdx(), sitemap()],
+  site: "https://xp-potion.netlify.app", // your site’s canonical URL
   redirects: {
     "/posts": "/blog"
   }
