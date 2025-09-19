@@ -88,7 +88,7 @@ const jsonLd = {
     >
       {showHome && (
         <li class="inline-flex items-center gap-2" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href={homeHref} class="hover:underline underline-offset-4 inline-flex items-center gap-1" itemprop="item">
+          <a href={homeHref} class="hover:underline underline-offset-4 py-0.5 inline-flex items-center gap-1" itemprop="item">
             <span itemprop="name">{homeLabel}</span>
           </a>
           <meta itemprop="position" content="1" />
@@ -102,7 +102,7 @@ const jsonLd = {
         return (
           <li class="inline-flex items-center gap-2" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             {(!isLast && c.href) ? (
-              <a href={c.href} class="hover:underline underline-offset-4" itemprop="item">
+              <a href={c.href} class="hover:underline underline-offset-4 py-0.5" itemprop="item">
                 <span itemprop="name">{c.label}</span>
               </a>
             ) : (
