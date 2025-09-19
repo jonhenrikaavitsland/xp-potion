@@ -18,6 +18,7 @@ const { frontmatter } = Astro.props;
           <img
             src={frontmatter.image.url}
             alt={frontmatter.image.alt}
+            loading='lazy'
           />
         </div>
         <section class='flex flex-col gap-4 grow'>

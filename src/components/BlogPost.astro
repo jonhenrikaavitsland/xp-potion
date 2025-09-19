@@ -13,6 +13,7 @@ const { title, url, image, excerpt, heading } = Astro.props;
             src={image.url}
             alt={image.alt}
             class='rounded-t-xl h-full w-full object-contain'
+            loading='lazy'
           />
         </div>
         <div
