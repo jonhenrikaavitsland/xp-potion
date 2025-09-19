@@ -95,7 +95,7 @@ export default function MysteryBoostGuess({
     // Basic validation
     if (!flavor.trim()) return setError("Please enter your flavor guess.");
     if (!email.trim() || !emailRe.test(email.trim())) return setError("Please enter a valid email address.");
-    if (!consent) return setError("Please accept the consent to receive updates and hints.");
+    // if (!consent) return setError("Please accept the consent to receive updates and hints.");
 
     try {
       setBusy(true);
@@ -227,9 +227,9 @@ export default function MysteryBoostGuess({
             {feedback}
           </p>
           <div className="mt-3 flex flex-wrap gap-2 text-sm">
-            <a href="#" className="rounded-lg bg-neutral-900 px-4 py-2 hover:text-accent-neon-pink">Join the hunt</a>
-            <a href="#" className="rounded-lg bg-neutral-900 px-4 py-2 hover:text-accent-neon-pink">Submit another guess</a>
-            <a href="#" className="rounded-lg bg-neutral-900 px-4 py-2 hover:text-accent-neon-pink">#GuessTheBoost</a>
+            <a href="/products" className="rounded-lg bg-neutral-900 px-4 py-2 hover:text-accent-neon-pink">Discover more</a>
+            <a href="/products/mystery-boost" className="rounded-lg bg-neutral-900 px-4 py-2 hover:text-accent-neon-pink">Grab a can</a>
+            <a href="https://twitter.com/intent/tweet?url=https://xp-potion.netlify.app/guess-the-mystery-boost&text=can you guess the flavour? " className="rounded-lg bg-neutral-900 px-4 py-2 hover:text-accent-neon-pink">#GuessTheBoost</a>
           </div>
         </div>
       )}
